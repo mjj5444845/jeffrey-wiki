@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --no-turbopack)",
+      "PowerShell(Get-Command node, npm, npx, pnpm -ErrorAction SilentlyContinue)",
+      "PowerShell($env:PATH -split ';' | ForEach-Object { if \\(Test-Path \"$_\\\\node.exe\"\\) { \"Found node at: $_\" } }; where.exe node 2>&1; where.exe npm 2>&1)",
+      "PowerShell(scoop install nodejs-lts 2>&1)",
+      "PowerShell($env:PATH = [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"User\"\\); node --version; npm --version)",
+      "PowerShell($env:PATH = [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"User\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"Machine\"\\); Set-Location \"d:\\\\github\\\\homepage\"; npm install gray-matter unified remark-parse remark-rehype rehype-stringify rehype-raw 2>&1)",
+      "PowerShell($env:PATH = [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"User\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"Machine\"\\); Set-Location \"d:\\\\github\\\\homepage\"; node -e \"require\\('unist-util-visit'\\); console.log\\('ok'\\)\" 2>&1)",
+      "PowerShell($env:PATH = [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"User\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"Machine\"\\); Set-Location \"d:\\\\github\\\\homepage\"; npm run build 2>&1)",
+      "PowerShell($env:PATH = [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"User\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"Machine\"\\); Set-Location \"d:\\\\github\\\\homepage\"; Start-Process -NoNewWindow -FilePath \"npm\" -ArgumentList \"run\",\"dev\" -PassThru | Select-Object Id; Start-Sleep -Seconds 5; Invoke-WebRequest -Uri \"http://localhost:3000\" -MaximumRedirection 5 -UseBasicParsing 2>&1 | Select-Object -First 3 StatusCode,StatusDescription)",
+      "PowerShell($env:PATH = [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"User\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"Machine\"\\); Set-Location \"d:\\\\github\\\\homepage\"; npx tsc --noEmit 2>&1)",
+      "WebFetch(domain:mjj5444845.notion.site)",
+      "WebFetch(domain:zh.wikipedia.org)",
+      "PowerShell($env:PATH = [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"User\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"Machine\"\\); Set-Location \"d:\\\\github\\\\homepage\"; npm install rehype-slug 2>&1)",
+      "PowerShell($env:PATH = [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"User\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"Machine\"\\); Set-Location \"d:\\\\github\\\\homepage\"; npm install remark-gfm 2>&1)"
+    ]
+  }
+}
