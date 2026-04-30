@@ -1,36 +1,32 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# JeffreyWiki
 
-## Getting Started
+## What is this
 
-First, run the development server:
+JeffreyWiki is Junjie Ma's personal academic homepage, styled after Wikipedia. It serves as a knowledge base covering research interests, teaching experience, mentoring, and personal notes, and supports bilingual browsing (English / 中文).
 
-```bash
+Built with **Next.js 16** (App Router, fully static SSG) + **Markdown** files. Key features:
+
+- Front matter (YAML metadata per page)
+- Wikipedia-style floating infoboxes with dynamic age calculation
+- `[[wikilink]]` syntax for internal links
+- Auto-generated Table of Contents
+- EN / ZH language toggle (persisted in localStorage)
+
+## Local Development & Build
+
+**Prerequisites:** Node.js 18 or later. On Windows, install via [Scoop](https://scoop.sh/): `scoop install nodejs-lts`.
+
+> Run all commands in **Windows PowerShell** — not WSL bash. The native `lightningcss` binaries installed by npm are Windows-specific; running from WSL causes a platform mismatch error.
+
+```powershell
+# Install dependencies
+npm install
+
+# Start dev server → http://localhost:3000
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Production build (verifies all pages generate without error)
+npm run build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Content lives in `content/wiki/`. Each `<slug>.md` file is an English page; a matching `<slug>.zh.md` provides the Chinese translation. See `CLAUDE.md` for the full authoring guide.

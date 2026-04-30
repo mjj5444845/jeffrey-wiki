@@ -2,22 +2,22 @@
 
 import WikiNav from './WikiNav'
 import { useLanguage } from '@/context/LanguageContext'
+import siteConfig from '@/lib/siteConfig'
 import type { WikiPageMeta } from '@/types/wiki'
 
 interface Props {
   children: React.ReactNode
   pages: WikiPageMeta[]
-  siteName?: string
 }
 
-export default function WikiLayout({ children, pages, siteName = 'Junjie Ma' }: Props) {
+export default function WikiLayout({ children, pages }: Props) {
   const { t } = useLanguage()
 
   return (
     <div className="wiki-layout">
       <header className="wiki-header">
         <div className="wiki-header-inner">
-          <span className="wiki-header-site-name">{siteName}</span>
+          <a href="/" className="wiki-header-site-name">{siteConfig.name}</a>
           <form className="wiki-search-form" action="/search" method="get">
             <input
               type="search"
@@ -32,7 +32,7 @@ export default function WikiLayout({ children, pages, siteName = 'Junjie Ma' }: 
 
       <div className="wiki-body">
         <aside className="wiki-sidebar">
-          <WikiNav pages={pages} siteName={siteName} />
+          <WikiNav pages={pages} />
         </aside>
         <main className="wiki-main">{children}</main>
       </div>

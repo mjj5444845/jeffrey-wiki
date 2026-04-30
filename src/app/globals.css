@@ -76,7 +76,9 @@ a:hover { text-decoration: underline; }
   font-size: 0.9rem;
   color: var(--wiki-text-muted);
   white-space: nowrap;
+  text-decoration: none;
 }
+.wiki-header-site-name:hover { text-decoration: none; color: var(--wiki-text-muted); }
 
 /* ── Search form ─────────────────────────────────────────────────── */
 .wiki-search-form { display: flex; align-items: center; gap: 4px; }
@@ -607,6 +609,85 @@ a:hover { text-decoration: underline; }
 .wiki-footer-links a:hover { text-decoration: underline; }
 
 .wiki-footer-text { color: var(--wiki-text-muted); }
+
+/* ══════════════════════════════════════════════════════════════════
+   SIDEBAR (no wordmark)
+══════════════════════════════════════════════════════════════════ */
+.wiki-nav-section-first { padding-top: 4px; }
+
+/* ══════════════════════════════════════════════════════════════════
+   MESSAGE FORM
+══════════════════════════════════════════════════════════════════ */
+.wiki-message-form {
+  max-width: 600px;
+}
+
+.wiki-form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 14px;
+}
+
+.wiki-form-label {
+  font-family: var(--wiki-ui-font);
+  font-size: 0.875rem;
+  font-weight: bold;
+  color: var(--wiki-text);
+}
+
+.wiki-form-input,
+.wiki-form-textarea {
+  font-family: var(--wiki-ui-font);
+  font-size: 0.875rem;
+  color: var(--wiki-text);
+  background: #fff;
+  border: 1px solid var(--wiki-border);
+  border-radius: 2px;
+  padding: 5px 8px;
+  width: 100%;
+  box-sizing: border-box;
+  outline: none;
+  transition: border-color 0.15s;
+}
+.wiki-form-input:focus,
+.wiki-form-textarea:focus {
+  border-color: #3366cc;
+}
+
+.wiki-form-textarea {
+  resize: vertical;
+  line-height: 1.5;
+}
+
+.wiki-form-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.wiki-form-btn {
+  font-family: var(--wiki-ui-font);
+  font-size: 0.875rem;
+  background: #f8f9fa;
+  border: 1px solid var(--wiki-border);
+  border-radius: 2px;
+  padding: 5px 14px;
+  cursor: pointer;
+  color: var(--wiki-text);
+  white-space: nowrap;
+}
+.wiki-form-btn:hover {
+  background: #e8e9ea;
+  border-color: #999;
+}
+
+.wiki-form-note {
+  font-family: var(--wiki-ui-font);
+  font-size: 0.8rem;
+  color: var(--wiki-text-muted);
+}
 
 /* ══════════════════════════════════════════════════════════════════
    RESPONSIVE

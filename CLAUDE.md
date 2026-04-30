@@ -1,11 +1,12 @@
 @AGENTS.md
 
-# Junjie Ma — Personal Academic Homepage
+# JeffreyWiki — Personal Academic Homepage
 
 ## Site Overview
 
 This is the personal academic homepage of **Junjie Ma (马骏杰, Jeffrey)**, a Ph.D. student in Computer Science at George Mason University. The site is styled after Wikipedia and built with Next.js (App Router) + Markdown files.
 
+**Site name:** JeffreyWiki  
 **Owner:** Junjie Ma (马骏杰), also goes by Jeffrey  
 **Affiliation:** Ph.D. student, Dept. of Computer Science, George Mason University  
 **Advisor:** Dr. Zhicong Lu  
@@ -23,6 +24,7 @@ This is the personal academic homepage of **Junjie Ma (马骏杰, Jeffrey)**, a 
 | Front matter | `gray-matter` (YAML) |
 | Wikilinks | Custom remark plugin at `src/lib/wikilinks.ts` |
 | i18n | `src/lib/i18n.ts` + `src/context/LanguageContext.tsx` (React Context) |
+| Site constants | `src/lib/siteConfig.ts` (name, email, messageUrl, historyUrl) |
 | Type definitions | `src/types/wiki.ts` |
 
 ---
@@ -45,6 +47,7 @@ All pages live as Markdown files in `content/wiki/`. The file name (without `.md
 - The root `/` redirects to `/wiki/home`.
 - `/wiki/index` auto-generates an alphabetical index of all English pages.
 - `*.zh.md` files are loaded automatically alongside their English counterpart; they never appear as separate pages.
+- `/message` is the contact form page (not a wiki page).
 
 ---
 
@@ -72,7 +75,7 @@ Do **not** use `#` (h1) in the markdown body — the `title` front matter alread
 
 ## Infobox
 
-The infobox floats to the right of the article body (Wikipedia-style). It is defined inside `infobox:` in front matter and rendered by `src/components/Infobox.tsx`.
+The infobox floats to the right of the article body (Wikipedia-style). It is defined inside `infobox:` in front matter and rendered by `src/components/Infobox.tsx` (a client component).
 
 **Reserved keys** (not rendered as table rows):
 
@@ -82,7 +85,41 @@ The infobox floats to the right of the article body (Wikipedia-style). It is def
 | `image` | Path to an image in `/public/` |
 | `imageCaption` | Caption text shown below the image |
 
-Every other key becomes a row: the key is the label, the value is the data. Labels are split on camelCase boundaries (`MyLabel` → `My Label`). Infobox values are **plain text only** — do not use Markdown or links inside infobox values.
+Every other key becomes a row: the key is the label, the value is the data. Labels are split on camelCase boundaries (`MyLabel` → `My Label`).
+
+**Special value tokens supported by Infobox:**
+
+| Token | Example | Effect |
+|---|---|---|
+| `{age:YYYY-MM}` | `December 1996 {age:1996-12}` | Replaced with `(age N)` at render time |
+| `[text](url)` | `[jma26@gmu.edu](mailto:jma26@gmu.edu)` | Rendered as `<a>` link |
+| Literal `\n` | `B.S. ...\nM.S. ...` | Rendered as `<br />` line break |
+
+---
+
+## Article Tabs
+
+Each wiki article page shows three tabs in the top-right of the content area:
+
+| Tab | Behavior |
+|---|---|
+| **Read** (EN) / **阅读** (ZH) | Active on wiki article pages |
+| **Message** (EN) / **留言** (ZH) | Links to `/message` (contact form) |
+| **View History** (EN) / **查看历史** (ZH) | Opens `https://github.com/mjj5444845/jeffrey-wiki/commits/main/` in a new tab |
+
+The language toggle button (🌐) appears to the left of the tabs when a `.zh.md` file exists for the current page.
+
+There is **no** "Edit" tab. There is **no** "From Junjie Ma's personal wiki" tagline anywhere.
+
+---
+
+## Contact Form (`/message`)
+
+`src/app/message/page.tsx` renders a simple form (Title + Text + Send button) via `src/components/MessageForm.tsx`.
+
+On submit, it constructs a `mailto:jma26@gmu.edu?subject=...&body=...` URL and sets `window.location.href`. This opens the user's default email client — no backend required.
+
+All labels on the form are i18n'd via `useLanguage()` (`msgTitleLabel`, `msgTextLabel`, `msgSendBtn`, `msgNote`).
 
 ---
 
@@ -90,13 +127,13 @@ Every other key becomes a row: the key is the label, the value is the data. Labe
 
 Each page can have an optional Chinese translation file named `<slug>.zh.md`. When present:
 
-- A **🌐 language toggle button** appears at the top-right of the article (same row as the "Read/Edit/History" tabs, aligned left).
+- A **🌐 language toggle button** appears at the top-left of the tabs row.
 - The toggle persists in `localStorage` across page navigations.
 - Clicking it switches the article content (title, description, infobox, body) to the Chinese version.
 - The URL does **not** change.
 - All UI labels (tabs, TOC, sidebar, footer) also switch language via `LanguageContext`.
 
-The Chinese file follows the exact same front matter schema. Infobox field keys can be Chinese (e.g., `职位:`) — they will display as-is since there are no camelCase boundaries to split.
+The Chinese file follows the exact same front matter schema. Infobox field keys can be Chinese (e.g., `职位:`) — they will display as-is.
 
 ---
 
@@ -110,7 +147,7 @@ Use `[[Page Name]]` anywhere in markdown body to create an internal link. The sl
 | `[[Publications]]` | `/wiki/publications` |
 | `[[Research\|研究]]` | `/wiki/research`, displays "研究" |
 
-This works identically in both English and Chinese `.md` files. In Chinese files, always use `[[EnglishSlug\|中文显示文字]]` so the link resolves correctly.
+In Chinese files, always use `[[EnglishSlug\|中文显示文字]]` so the link resolves correctly.
 
 ---
 
@@ -118,12 +155,11 @@ This works identically in both English and Chinese `.md` files. In Chinese files
 
 ### Voice
 - **All pages must be written in third person.** Use "Junjie Ma" or "he" — never "I" or "my".
-- This applies equally to English and Chinese files.
-- Chinese third-person convention: use "马骏杰" on first reference, then "他" thereafter.
+- Chinese third-person: use "马骏杰" on first reference, then "他" thereafter.
 
 ### Lists (bullet points)
 - **No bullet or numbered lists in the article body.** Convert them to flowing prose paragraphs.
-- Lists are **only permitted** in these sections at the bottom of a page:
+- Lists are **only permitted** in these sections:
   - `## See Also` / `## 参见`
   - `## External Links` / `## 外部链接`
   - `## References` / `## 参考文献`
@@ -132,7 +168,6 @@ This works identically in both English and Chinese `.md` files. In Chinese files
 
 ### Tone
 - Academic: precise, neutral, no marketing language.
-- Chinese text is natural and welcome throughout.
 - Emoji is allowed in External Links sections only (📧 🎓 💼 etc.).
 
 ### Section structure (recommended order)
@@ -144,46 +179,43 @@ This works identically in both English and Chinese `.md` files. In Chinese files
 
 ---
 
-## Adding or Updating Content
+## Site Constants (`src/lib/siteConfig.ts`)
 
-### Add a new page
-1. Create `content/wiki/your-slug.md` with front matter (`title` required).
-2. Optionally create `content/wiki/your-slug.zh.md` for the Chinese version.
-3. The page is available at `/wiki/your-slug` after the next build.
+All site-wide constants are centralized here:
 
-### Add a publication
-Edit `content/wiki/publications.md` (and `.zh.md`). Use a table under a `## Year` heading.
-
-### Add a news item
-Edit `content/wiki/home.md`. Add a new line at the **top** of `## News` in the format:
-```
-**MM/DD/YYYY** — Event description (third person, no bullet).
+```ts
+const siteConfig = {
+  name: 'JeffreyWiki',
+  email: 'jma26@gmu.edu',
+  historyUrl: 'https://github.com/mjj5444845/jeffrey-wiki/commits/main/',
+  messageUrl: '/message',
+} as const
 ```
 
-### Add a mentee
-Edit `content/wiki/mentoring.md` (and `.zh.md`). Add a row to the mentees table.
+Do **not** hardcode the site name, email, or these URLs elsewhere — always import from `siteConfig`.
 
 ---
 
-## Images
+## Sidebar (WikiNav)
 
-Place image files in `/public/`. Reference them as `/filename.ext` in front matter or markdown `![alt](/filename.ext)`.
+The sidebar has **no wordmark section** — the `wiki-nav-wordmark` div was removed. The first nav section uses class `wiki-nav-section-first` to add top padding.
 
-**Profile photo:** Place the profile image at `/public/profile.png`. It is referenced in `home.md`'s infobox.
+Sections:
+1. **Navigation** — Main Page link only
+2. **Pages** — all wiki pages from `getAllPagesMeta()`
+
+There is **no** "All pages" link in the sidebar.
 
 ---
 
 ## i18n System
 
-UI strings live in `src/lib/i18n.ts`. To add or change a label, edit both the `en` and `zh` keys there.
+UI strings live in `src/lib/i18n.ts`. Both `en` and `zh` objects must have identical keys. Type: `I18n = Record<keyof typeof i18n.en, string>`.
 
-The language is provided by `LanguageContext` (`src/context/LanguageContext.tsx`), which wraps the app in `src/app/layout.tsx`. All layout components (`WikiLayout`, `WikiNav`, `WikiContent`, `TableOfContents`) are client components that call `useLanguage()` to get the current `lang` and `t` (translation object).
-
----
-
-## Site Name & Metadata
-
-The site name **"Junjie Ma"** is the default prop in `WikiLayout` and `WikiNav`. Global `<title>` and `<meta description>` are in `src/app/layout.tsx`. Per-page titles are `"${page.title} — Junjie Ma"` (see `src/app/wiki/[slug]/page.tsx`).
+Key i18n entries relevant to recent changes:
+- `tabMessage` / `tabHistory` — article tab labels
+- `msgTitleLabel`, `msgTextLabel`, `msgSendBtn`, `msgNote` — contact form labels
+- `langSwitchLabel` — language toggle button text
 
 ---
 

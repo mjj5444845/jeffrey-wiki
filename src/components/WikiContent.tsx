@@ -3,6 +3,7 @@
 import Infobox from './Infobox'
 import TableOfContents from './TableOfContents'
 import { useLanguage } from '@/context/LanguageContext'
+import siteConfig from '@/lib/siteConfig'
 import type { WikiPage } from '@/types/wiki'
 
 interface Props {
@@ -22,9 +23,8 @@ export default function WikiContent({ page }: Props) {
   return (
     <div className="wiki-content-wrapper">
 
-      {/* ── Tabs row: language toggle (left) + article tabs (right) ── */}
+      {/* Tabs row: language toggle (left) + article tabs (right) */}
       <div className="wiki-tabs-row">
-        {/* Language toggle — Wikipedia-style globe button */}
         {page.zh && (
           <button className="wiki-lang-toggle" onClick={toggle} title="Switch language / 切换语言">
             <span className="wiki-lang-toggle-icon">🌐</span>
@@ -32,17 +32,21 @@ export default function WikiContent({ page }: Props) {
           </button>
         )}
 
-        {/* Article action tabs */}
         <ul className="wiki-page-tabs">
           <li className="wiki-page-tab active"><span>{t.tabRead}</span></li>
-          <li className="wiki-page-tab"><a href="#">{t.tabEdit}</a></li>
-          <li className="wiki-page-tab"><a href="#">{t.tabHistory}</a></li>
+          <li className="wiki-page-tab">
+            <a href={siteConfig.messageUrl}>{t.tabMessage}</a>
+          </li>
+          <li className="wiki-page-tab">
+            <a href={siteConfig.historyUrl} target="_blank" rel="noopener noreferrer">
+              {t.tabHistory}
+            </a>
+          </li>
         </ul>
       </div>
 
       <article className="wiki-article">
         <header className="wiki-article-header">
-          <p className="wiki-from-tagline">{t.fromTagline}</p>
           <h1 className="wiki-article-title">{title}</h1>
           {description && (
             <p className="wiki-article-description">{description}</p>

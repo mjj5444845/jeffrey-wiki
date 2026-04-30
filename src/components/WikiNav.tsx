@@ -7,23 +7,16 @@ import type { WikiPageMeta } from '@/types/wiki'
 
 interface Props {
   pages: WikiPageMeta[]
-  siteName?: string
 }
 
-export default function WikiNav({ pages, siteName = 'Junjie Ma' }: Props) {
+export default function WikiNav({ pages }: Props) {
   const pathname = usePathname()
   const { t } = useLanguage()
 
   return (
     <nav className="wiki-nav" aria-label="Site navigation">
-      <div className="wiki-nav-wordmark">
-        <Link href="/" className="wiki-nav-wordmark-link">
-          <span className="wiki-nav-wordmark-name">{siteName}</span>
-          <span className="wiki-nav-wordmark-sub">{t.wordmarkSub}</span>
-        </Link>
-      </div>
-
-      <div className="wiki-nav-section">
+      {/* Navigation section */}
+      <div className="wiki-nav-section wiki-nav-section-first">
         <h3 className="wiki-nav-section-title">{t.navNavigation}</h3>
         <ul className="wiki-nav-list">
           <li>
@@ -31,14 +24,10 @@ export default function WikiNav({ pages, siteName = 'Junjie Ma' }: Props) {
               {t.navMainPage}
             </Link>
           </li>
-          <li>
-            <Link href="/wiki/index" className={`wiki-nav-link${pathname === '/wiki/index' ? ' active' : ''}`}>
-              {t.navAllPages}
-            </Link>
-          </li>
         </ul>
       </div>
 
+      {/* Pages section */}
       <div className="wiki-nav-section">
         <h3 className="wiki-nav-section-title">{t.navPages}</h3>
         <ul className="wiki-nav-list">
