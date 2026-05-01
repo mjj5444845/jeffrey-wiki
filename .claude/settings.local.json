@@ -14,7 +14,10 @@
       "WebFetch(domain:mjj5444845.notion.site)",
       "WebFetch(domain:zh.wikipedia.org)",
       "PowerShell($env:PATH = [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"User\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"Machine\"\\); Set-Location \"d:\\\\github\\\\homepage\"; npm install rehype-slug 2>&1)",
-      "PowerShell($env:PATH = [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"User\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"Machine\"\\); Set-Location \"d:\\\\github\\\\homepage\"; npm install remark-gfm 2>&1)"
+      "PowerShell($env:PATH = [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"User\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"Machine\"\\); Set-Location \"d:\\\\github\\\\homepage\"; npm install remark-gfm 2>&1)",
+      "Bash(powershell -Command ' *)",
+      "Bash(python3)",
+      "Bash(python3 -c \"print\\('hello'\\)\")"
     ]
   }
 }

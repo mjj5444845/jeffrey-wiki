@@ -611,6 +611,86 @@ a:hover { text-decoration: underline; }
 .wiki-footer-text { color: var(--wiki-text-muted); }
 
 /* ══════════════════════════════════════════════════════════════════
+   NAVBOX (Wikipedia-style footer navigation table)
+══════════════════════════════════════════════════════════════════ */
+
+/* Outer wrapper */
+.wiki-navbox {
+  border: 1px solid #a2a9b1;
+  font-family: var(--wiki-ui-font);
+  font-size: 0.8125rem;
+  text-align: center;
+  padding: 1px;
+  margin: 1.4em 0 0;
+  clear: both;
+}
+
+/* Reset: specificity 0-2-2, beats .wiki-content table th/td (0-1-2) — no !important needed */
+.wiki-content .wiki-navbox table {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: separate;
+  background: transparent;
+  margin: 0;
+  font-size: inherit;
+}
+.wiki-content .wiki-navbox table th,
+.wiki-content .wiki-navbox table td {
+  border: none;
+  padding: 0;
+  background: none;
+}
+
+/* Title cell — specificity 0-3-2, beats reset */
+.wiki-content .wiki-navbox table th.wiki-navbox-title {
+  background-color: #ccf;
+  text-align: center;
+  padding: 4px 1em;
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--wiki-text);
+}
+
+/* Group cell — specificity 0-3-2, beats reset */
+.wiki-content .wiki-navbox table th.wiki-navbox-group {
+  background-color: #ddf;
+  text-align: right;
+  white-space: nowrap;
+  width: 1%;
+  padding: 0.3em 0.8em;
+  font-weight: bold;
+  color: var(--wiki-text);
+  vertical-align: middle;
+  border-top: 3px solid #fff;
+}
+
+/* List cell — specificity 0-3-2, beats reset */
+.wiki-content .wiki-navbox table td.wiki-navbox-list {
+  text-align: left;
+  padding: 0;
+  border-top: 3px solid #fff;
+  border-left: 3px solid #fff;
+}
+.wiki-navbox-list > div {
+  padding: 0.3em 0.5em;
+  line-height: 1.7;
+}
+
+/* Even rows */
+.wiki-content .wiki-navbox table td.wiki-navbox-list.wiki-navbox-even {
+  background-color: #f7f7f7;
+}
+
+/* No separator above the first data row — specificity 0-2-4 */
+.wiki-content .wiki-navbox table tr:nth-child(2) th.wiki-navbox-group,
+.wiki-content .wiki-navbox table tr:nth-child(2) td.wiki-navbox-list {
+  border-top: none;
+}
+
+.wiki-navbox a { color: var(--wiki-link); }
+.wiki-navbox a:hover { text-decoration: underline; }
+
+/* ══════════════════════════════════════════════════════════════════
    SIDEBAR (no wordmark)
 ══════════════════════════════════════════════════════════════════ */
 .wiki-nav-section-first { padding-top: 4px; }

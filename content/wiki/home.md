@@ -40,3 +40,21 @@ His research lies in **Human-Computer Interaction (HCI)**, with a methodological
 
 ## External Links
 - 📄 [Resume](https://drive.google.com/file/d/1Mb10iDfYnIEhARx7CiUtK-NCotcfkWho/view?usp=drive_link)
+
+<div class="wiki-navbox">
+<table><tbody>
+<tr><th class="wiki-navbox-title" colspan="2">Friends &amp; Colleagues — Personal Homepages</th></tr>
+<tr>
+<th class="wiki-navbox-group">HCI</th>
+<td class="wiki-navbox-list"><div>
+<a href="https://chuankaizhang.com/#/">Charles Chuankai Zhang</a>
+</div></td>
+</tr>
+<tr>
+<th class="wiki-navbox-group">Others</th>
+<td class="wiki-navbox-list wiki-navbox-even"><div>
+<a href="https://gujialiang123.github.io/">Jialiang Gu</a>
+</div></td>
+</tr>
+</tbody></table>
+</div>

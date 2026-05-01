@@ -159,6 +159,50 @@ In Chinese files, always use `[[EnglishSlug\|中文显示文字]]` so the link r
 3. `## See Also` (if applicable)
 4. `## External Links` (if applicable)
 5. `## References` / `## Footnotes` (if applicable)
+6. Friends navbox (if on the home page — see below)
+
+---
+
+## Friends Navbox (`content/wiki/home.md`)
+
+A Wikipedia-style navbox sits at the very end of `home.md`, after the `## External Links` section. It is written as raw HTML (passed through by `rehype-raw`) and styled via `.wiki-navbox` classes in `globals.css`.
+
+**Template for adding / editing friend links:**
+
+```html
+<div class="wiki-navbox">
+<table><tbody>
+<tr><th class="wiki-navbox-title" colspan="2">Friends &amp; Colleagues — Personal Homepages</th></tr>
+<tr>
+<th class="wiki-navbox-group">HCI</th>
+<td class="wiki-navbox-list"><div>
+<a href="URL">Name</a> ·
+<a href="URL">Name</a>
+</div></td>
+</tr>
+<tr>
+<th class="wiki-navbox-group">Others</th>
+<td class="wiki-navbox-list wiki-navbox-even"><div>
+<a href="URL">Name</a>
+</div></td>
+</tr>
+</tbody></table>
+</div>
+```
+
+**Rules:**
+- Each `<tr>` after the title row is one group. Add more `<tr>` blocks for more groups.
+- Separate links within a group with ` · ` (space, middle dot, space).
+- Alternate rows use class `wiki-navbox-even` on `<td>` for a light gray tint.
+- Group label goes in `<th class="wiki-navbox-group">`.
+- Do **not** add a `v · t · e` badge — this navbox has no edit links.
+
+**Current entries (update when friends are added/removed):**
+
+| Group | Name | URL |
+|---|---|---|
+| HCI | Charles Chuankai Zhang | https://chuankaizhang.com/#/ |
+| Others | Jialiang Gu | https://gujialiang123.github.io/ |
 
 ---
 
