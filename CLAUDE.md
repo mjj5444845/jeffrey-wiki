@@ -25,6 +25,7 @@ This is the personal academic homepage of **Junjie Ma (马骏杰, Jeffrey)**, a 
 | Wikilinks | Custom remark plugin at `src/lib/wikilinks.ts` |
 | i18n | `src/lib/i18n.ts` + `src/context/LanguageContext.tsx` (React Context) |
 | Site constants | `src/lib/siteConfig.ts` (name, email, messageUrl, historyUrl) |
+| i18n | `src/lib/i18n.ts` + `src/context/LanguageContext.tsx` (English-only; provides `t` to all layout components) |
 | Type definitions | `src/types/wiki.ts` |
 
 ---
@@ -45,8 +46,7 @@ All pages live as Markdown files in `content/wiki/`. The file name (without `.md
 | `miscellanea.md` | `miscellanea.zh.md` | `/wiki/miscellanea` | Personal miscellany |
 
 - The root `/` redirects to `/wiki/home`.
-- `/wiki/index` auto-generates an alphabetical index of all English pages.
-- `*.zh.md` files are loaded automatically alongside their English counterpart; they never appear as separate pages.
+- `/wiki/index` auto-generates an alphabetical index of all pages.
 - `/message` is the contact form page (not a wiki page).
 
 ---
@@ -107,9 +107,7 @@ Each wiki article page shows three tabs in the top-right of the content area:
 | **Message** (EN) / **留言** (ZH) | Links to `/message` (contact form) |
 | **View History** (EN) / **查看历史** (ZH) | Opens `https://github.com/mjj5444845/jeffrey-wiki/commits/main/` in a new tab |
 
-The language toggle button (🌐) appears to the left of the tabs when a `.zh.md` file exists for the current page.
-
-There is **no** "Edit" tab. There is **no** "From Junjie Ma's personal wiki" tagline anywhere.
+There is **no** "Edit" tab. There is **no** "From Junjie Ma's personal wiki" tagline anywhere. There is **no** language toggle button.
 
 ---
 
@@ -120,20 +118,6 @@ There is **no** "Edit" tab. There is **no** "From Junjie Ma's personal wiki" tag
 On submit, it constructs a `mailto:jma26@gmu.edu?subject=...&body=...` URL and sets `window.location.href`. This opens the user's default email client — no backend required.
 
 All labels on the form are i18n'd via `useLanguage()` (`msgTitleLabel`, `msgTextLabel`, `msgSendBtn`, `msgNote`).
-
----
-
-## Bilingual Content
-
-Each page can have an optional Chinese translation file named `<slug>.zh.md`. When present:
-
-- A **🌐 language toggle button** appears at the top-left of the tabs row.
-- The toggle persists in `localStorage` across page navigations.
-- Clicking it switches the article content (title, description, infobox, body) to the Chinese version.
-- The URL does **not** change.
-- All UI labels (tabs, TOC, sidebar, footer) also switch language via `LanguageContext`.
-
-The Chinese file follows the exact same front matter schema. Infobox field keys can be Chinese (e.g., `职位:`) — they will display as-is.
 
 ---
 
@@ -155,7 +139,6 @@ In Chinese files, always use `[[EnglishSlug\|中文显示文字]]` so the link r
 
 ### Voice
 - **All pages must be written in third person.** Use "Junjie Ma" or "he" — never "I" or "my".
-- Chinese third-person: use "马骏杰" on first reference, then "他" thereafter.
 
 ### Lists (bullet points)
 - **No bullet or numbered lists in the article body.** Convert them to flowing prose paragraphs.
@@ -212,10 +195,9 @@ There is **no** "All pages" link in the sidebar.
 
 UI strings live in `src/lib/i18n.ts`. Both `en` and `zh` objects must have identical keys. Type: `I18n = Record<keyof typeof i18n.en, string>`.
 
-Key i18n entries relevant to recent changes:
+Key i18n entries:
 - `tabMessage` / `tabHistory` — article tab labels
 - `msgTitleLabel`, `msgTextLabel`, `msgSendBtn`, `msgNote` — contact form labels
-- `langSwitchLabel` — language toggle button text
 
 ---
 

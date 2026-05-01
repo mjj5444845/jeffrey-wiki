@@ -1,7 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
-import { processMarkdown, processMarkdownZh, slugify } from './markdown'
+import { processMarkdown, slugify } from './markdown'
 import type { WikiPage, WikiPageMeta, WikiFrontMatter } from '@/types/wiki'
 
 const WIKI_DIR = path.join(process.cwd(), 'content', 'wiki')
@@ -10,7 +10,7 @@ export function getAllSlugs(): string[] {
   if (!fs.existsSync(WIKI_DIR)) return []
   return fs
     .readdirSync(WIKI_DIR)
-    .filter((f) => f.endsWith('.md') && !f.endsWith('.zh.md'))
+    .filter((f) => f.endsWith('.md'))
     .map((f) => f.replace(/\.md$/, ''))
 }
 
@@ -31,13 +31,6 @@ export async function getPage(slug: string): Promise<WikiPage | null> {
   const stat = fs.statSync(filePath)
   const page = await processMarkdown(source, slug)
   page.lastModified = stat.mtime.toISOString().split('T')[0]
-
-  // Load Chinese translation if it exists
-  const zhPath = path.join(WIKI_DIR, `${slug}.zh.md`)
-  if (fs.existsSync(zhPath)) {
-    const zhSource = fs.readFileSync(zhPath, 'utf-8')
-    page.zh = await processMarkdownZh(zhSource)
-  }
 
   return page
 }

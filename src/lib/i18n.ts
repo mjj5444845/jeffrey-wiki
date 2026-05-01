@@ -1,4 +1,4 @@
-export type Lang = 'en' | 'zh'
+export type Lang = 'en'
 
 export const i18n = {
   en: {
@@ -18,40 +18,11 @@ export const i18n = {
     footerAbout: 'About',
     footerAllPages: 'All pages',
     footerText: 'Junjie Ma · George Mason University · Built with Next.js + Markdown',
-    langSwitchLabel: '中文',
-    langIcon: '🌐',
-    noTranslation: 'No Chinese version available for this page.',
     msgPageTitle: 'Send a Message',
     msgTitleLabel: 'Title',
     msgTextLabel: 'Message',
     msgSendBtn: 'Send',
     msgNote: 'Clicking Send will open your default email application.',
-  },
-  zh: {
-    search: '搜索',
-    searchPlaceholder: '搜索…',
-    tabRead: '阅读',
-    tabMessage: '留言',
-    tabHistory: '查看历史',
-    tocTitle: '目录',
-    tocHide: '隐藏',
-    tocShow: '显示',
-    lastModified: '本页面最后修改于',
-    categories: '分类：',
-    navNavigation: '导航',
-    navPages: '页面',
-    navMainPage: '主页',
-    footerAbout: '关于',
-    footerAllPages: '所有页面',
-    footerText: '马骏杰 · 乔治梅森大学 · 本站由 Next.js + Markdown 构建',
-    langSwitchLabel: 'English',
-    langIcon: '🌐',
-    noTranslation: '此页面暂无中文版本。',
-    msgPageTitle: '发送消息',
-    msgTitleLabel: '标题',
-    msgTextLabel: '留言内容',
-    msgSendBtn: '发送',
-    msgNote: '点击发送将打开您的邮件客户端。',
   },
 } as const
 

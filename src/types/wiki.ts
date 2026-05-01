@@ -28,14 +28,6 @@ export interface WikiFrontMatter {
   }
 }
 
-export interface WikiPageZh {
-  title: string
-  description?: string
-  infobox?: InfoboxData
-  headings: HeadingItem[]
-  content: string
-}
-
 export interface WikiPage {
   slug: string
   title: string
@@ -45,7 +37,6 @@ export interface WikiPage {
   headings: HeadingItem[]
   content: string
   lastModified?: string
-  zh?: WikiPageZh
 }
 
 export interface WikiPageMeta {

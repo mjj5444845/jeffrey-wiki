@@ -10,7 +10,7 @@ import { visit } from 'unist-util-visit'
 import type { Root, Element, Text } from 'hast'
 import type { Plugin } from 'unified'
 import remarkWikiLinks, { slugify } from './wikilinks'
-import type { WikiFrontMatter, WikiPage, WikiPageZh, InfoboxData, InfoboxField, HeadingItem } from '@/types/wiki'
+import type { WikiFrontMatter, WikiPage, InfoboxData, InfoboxField, HeadingItem } from '@/types/wiki'
 
 function hastText(node: Element): string {
   let out = ''
@@ -73,17 +73,6 @@ export async function processMarkdown(source: string, slug: string): Promise<Wik
     title: fm.title || slug,
     description: fm.description,
     tags: fm.tags,
-    infobox: parseInfobox(fm.infobox),
-    headings,
-    content: html,
-  }
-}
-
-export async function processMarkdownZh(source: string): Promise<WikiPageZh> {
-  const { html, headings, fm } = await buildHtml(source)
-  return {
-    title: fm.title || '',
-    description: fm.description,
     infobox: parseInfobox(fm.infobox),
     headings,
     content: html,

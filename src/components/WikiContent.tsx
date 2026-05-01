@@ -11,27 +11,12 @@ interface Props {
 }
 
 export default function WikiContent({ page }: Props) {
-  const { lang, toggle, t } = useLanguage()
-
-  const showZh = lang === 'zh' && !!page.zh
-  const title       = showZh ? page.zh!.title       : page.title
-  const description = showZh ? page.zh!.description : page.description
-  const infobox     = showZh ? (page.zh!.infobox ?? page.infobox) : page.infobox
-  const headings    = showZh ? page.zh!.headings    : page.headings
-  const content     = showZh ? page.zh!.content     : page.content
+  const { t } = useLanguage()
 
   return (
     <div className="wiki-content-wrapper">
 
-      {/* Tabs row: language toggle (left) + article tabs (right) */}
       <div className="wiki-tabs-row">
-        {page.zh && (
-          <button className="wiki-lang-toggle" onClick={toggle} title="Switch language / 切换语言">
-            <span className="wiki-lang-toggle-icon">🌐</span>
-            <span className="wiki-lang-toggle-label">{t.langSwitchLabel}</span>
-          </button>
-        )}
-
         <ul className="wiki-page-tabs">
           <li className="wiki-page-tab active"><span>{t.tabRead}</span></li>
           <li className="wiki-page-tab">
@@ -47,16 +32,16 @@ export default function WikiContent({ page }: Props) {
 
       <article className="wiki-article">
         <header className="wiki-article-header">
-          <h1 className="wiki-article-title">{title}</h1>
-          {description && (
-            <p className="wiki-article-description">{description}</p>
+          <h1 className="wiki-article-title">{page.title}</h1>
+          {page.description && (
+            <p className="wiki-article-description">{page.description}</p>
           )}
         </header>
 
         <div className="wiki-article-body">
-          {infobox && <Infobox data={infobox} />}
-          <TableOfContents headings={headings} />
-          <div className="wiki-content" dangerouslySetInnerHTML={{ __html: content }} />
+          {page.infobox && <Infobox data={page.infobox} />}
+          <TableOfContents headings={page.headings} />
+          <div className="wiki-content" dangerouslySetInnerHTML={{ __html: page.content }} />
         </div>
 
         <footer className="wiki-article-footer">
