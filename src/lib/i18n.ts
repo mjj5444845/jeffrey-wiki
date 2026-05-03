@@ -5,7 +5,7 @@ export const i18n = {
     search: 'Search',
     searchPlaceholder: 'Search…',
     tabRead: 'Read',
-    tabMessage: 'Message',
+    tabMessage: 'Contact',
     tabHistory: 'View history',
     tocTitle: 'Contents',
     tocHide: 'hide',
@@ -18,11 +18,6 @@ export const i18n = {
     footerAbout: 'About',
     footerAllPages: 'All pages',
     footerText: 'Junjie Ma · George Mason University · Built with Next.js + Markdown',
-    msgPageTitle: 'Send a Message',
-    msgTitleLabel: 'Title',
-    msgTextLabel: 'Message',
-    msgSendBtn: 'Send',
-    msgNote: 'Clicking Send will open a GitHub issue form in a new tab. A GitHub account is required.',
   },
 } as const
 

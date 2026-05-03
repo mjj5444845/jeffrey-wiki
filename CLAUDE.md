@@ -23,9 +23,8 @@ This is the personal academic homepage of **Junjie Ma (马骏杰, Jeffrey)**, a 
 | Markdown pipeline | `unified` → `remark-parse` → `remark-gfm` → wikilink plugin → `remark-rehype` → `rehype-raw` → `rehype-slug` → heading extractor → `rehype-stringify` |
 | Front matter | `gray-matter` (YAML) |
 | Wikilinks | Custom remark plugin at `src/lib/wikilinks.ts` |
-| i18n | `src/lib/i18n.ts` + `src/context/LanguageContext.tsx` (React Context) |
-| Site constants | `src/lib/siteConfig.ts` (name, email, messageUrl, historyUrl) |
 | i18n | `src/lib/i18n.ts` + `src/context/LanguageContext.tsx` (English-only; provides `t` to all layout components) |
+| Site constants | `src/lib/siteConfig.ts` (name, email, messageUrl, historyUrl, issuesUrl) |
 | Type definitions | `src/types/wiki.ts` |
 
 ---
@@ -36,18 +35,18 @@ All pages live as Markdown files in `content/wiki/`. The file name (without `.md
 
 ### Page Map
 
-| English file | Chinese file | URL | Description |
-|---|---|---|---|
-| `home.md` | `home.zh.md` | `/wiki/home` | Main landing page |
-| `research.md` | `research.zh.md` | `/wiki/research` | Research interests |
-| `publications.md` | `publications.zh.md` | `/wiki/publications` | Papers and projects |
-| `teaching.md` | `teaching.zh.md` | `/wiki/teaching` | TA history at U of M |
-| `mentoring.md` | `mentoring.zh.md` | `/wiki/mentoring` | Mentoring and mentees |
-| `miscellanea.md` | `miscellanea.zh.md` | `/wiki/miscellanea` | Personal miscellany |
+| File | URL | Description |
+|---|---|---|
+| `home.md` | `/wiki/home` | Main landing page |
+| `research.md` | `/wiki/research` | Research interests |
+| `publications.md` | `/wiki/publications` | Papers and projects |
+| `teaching.md` | `/wiki/teaching` | TA history at U of M |
+| `mentoring.md` | `/wiki/mentoring` | Mentoring and mentees |
+| `miscellanea.md` | `/wiki/miscellanea` | Personal miscellany |
 
 - The root `/` redirects to `/wiki/home`.
 - `/wiki/index` auto-generates an alphabetical index of all pages.
-- `/message` is the contact form page (not a wiki page).
+- `/message` is the contact page (not a wiki page).
 
 ---
 
@@ -103,23 +102,23 @@ Each wiki article page shows three tabs in the top-right of the content area:
 
 | Tab | Behavior |
 |---|---|
-| **Read** (EN) / **阅读** (ZH) | Active on wiki article pages |
-| **Message** (EN) / **留言** (ZH) | Links to `/message` (contact form) |
-| **View History** (EN) / **查看历史** (ZH) | Opens `https://github.com/mjj5444845/jeffrey-wiki/commits/main/` in a new tab |
+| **Read** | Active on wiki article pages |
+| **Contact** | Links to `/message` (contact page) |
+| **View History** | Opens `https://github.com/mjj5444845/jeffrey-wiki/commits/main/` in a new tab |
 
 There is **no** "Edit" tab. There is **no** "From Junjie Ma's personal wiki" tagline anywhere. There is **no** language toggle button.
 
 ---
 
-## Contact Form (`/message`)
+## Contact Page (`/message`)
 
-`src/app/message/page.tsx` renders a simple form (Title + Text + Send button) via `src/components/MessageForm.tsx`.
+`src/app/message/page.tsx` renders a static contact page — no form, no backend.
 
-On submit, it opens `https://github.com/mjj5444845/jeffrey-wiki/issues/new?title=...&body=...&labels=message` in a new tab, pre-filling the GitHub issue form. No backend required; the visitor needs a GitHub account to submit.
+It displays a short introductory paragraph and a two-row table with:
+- **Email** — `jma26@gmu.edu` (mailto link)
+- **LinkedIn** — `linkedin.com/in/mjj11788178` (external link, opens in new tab)
 
-The issues URL is centralized in `siteConfig.issuesUrl`. For the `message` label to auto-apply, it must exist in the GitHub repo (create it under Issues → Labels).
-
-All form labels are i18n'd via `useLanguage()` (`msgTitleLabel`, `msgTextLabel`, `msgSendBtn`, `msgNote`).
+The page title is "Contact" (rendered as `<h1>`). The tab label in article pages is also "Contact" (`tabMessage` key in `i18n.ts`).
 
 ---
 
@@ -239,11 +238,10 @@ There is **no** "All pages" link in the sidebar.
 
 ## i18n System
 
-UI strings live in `src/lib/i18n.ts`. Both `en` and `zh` objects must have identical keys. Type: `I18n = Record<keyof typeof i18n.en, string>`.
+UI strings live in `src/lib/i18n.ts`. English-only. Type: `I18n = Record<keyof typeof i18n.en, string>`.
 
 Key i18n entries:
-- `tabMessage` / `tabHistory` — article tab labels
-- `msgTitleLabel`, `msgTextLabel`, `msgSendBtn`, `msgNote` — contact form labels
+- `tabRead`, `tabMessage`, `tabHistory` — article tab labels (`tabMessage` renders as "Contact")
 
 ---
 

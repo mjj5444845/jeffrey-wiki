@@ -1,17 +1,15 @@
 import type { Metadata } from 'next'
 import { getAllPagesMeta } from '@/lib/pages'
 import WikiLayout from '@/components/WikiLayout'
-import MessageForm from '@/components/MessageForm'
 
-export const metadata: Metadata = { title: 'Send a Message — JeffreyWiki' }
+export const metadata: Metadata = { title: 'Contact — JeffreyWiki' }
 
-export default function MessagePage() {
+export default function ContactPage() {
   const pages = getAllPagesMeta()
 
   return (
     <WikiLayout pages={pages}>
       <div className="wiki-content-wrapper">
-        {/* Mimic the tabs row styling without active tabs */}
         <div className="wiki-tabs-row">
           <ul className="wiki-page-tabs">
             <li className="wiki-page-tab"><a href="javascript:history.back()">← Back</a></li>
@@ -20,14 +18,27 @@ export default function MessagePage() {
 
         <article className="wiki-article">
           <header className="wiki-article-header">
-            <h1 className="wiki-article-title">Send a Message</h1>
-            <p className="wiki-article-description">
-              Send a message to Junjie Ma at{' '}
-              <a href="mailto:jma26@gmu.edu">jma26@gmu.edu</a>
-            </p>
+            <h1 className="wiki-article-title">Contact</h1>
           </header>
           <div className="wiki-article-body">
-            <MessageForm />
+            <div className="wiki-content">
+              <p>
+                If you have any questions or are interested in collaboration opportunities,
+                feel free to reach out through either of the following channels:
+              </p>
+              <table>
+                <tbody>
+                  <tr>
+                    <th>Email</th>
+                    <td><a href="mailto:jma26@gmu.edu">jma26@gmu.edu</a></td>
+                  </tr>
+                  <tr>
+                    <th>LinkedIn</th>
+                    <td><a href="https://www.linkedin.com/in/mjj11788178/" target="_blank" rel="noopener noreferrer">linkedin.com/in/mjj11788178</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </article>
       </div>

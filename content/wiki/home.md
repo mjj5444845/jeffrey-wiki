@@ -12,8 +12,6 @@ infobox:
     George Mason University (Ph.D. Student)
     University of Minnesota (M.S., B.S.)
   Occupation: Ph.D. Student
-  Email: "[jma26@gmu.edu](mailto:jma26@gmu.edu)"
-  LinkedIn: "[linkedin.com/in/mjj11788178](https://www.linkedin.com/in/mjj11788178/)"
 ---
 
 **Junjie Ma** (马骏杰, also known as Jeffrey) is a Ph.D. student in the [Department of Computer Science](https://cs.gmu.edu/) at [George Mason University](https://www.gmu.edu/), advised by [Dr. Zhicong Lu](https://luzhc.github.io/).
