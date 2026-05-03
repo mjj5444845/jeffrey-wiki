@@ -1,5 +1,5 @@
 ---
-title: Introduction
+title: Junjie Ma
 description: Ph.D. student in Computer Science at George Mason University
 tags: [homepage]
 infobox:
@@ -37,7 +37,7 @@ His research lies in **Human-Computer Interaction (HCI)**, with a methodological
 - [[Miscellanea]] — Personal miscellany
 
 ## External Links
-- 📄 [Resume](https://drive.google.com/file/d/1Mb10iDfYnIEhARx7CiUtK-NCotcfkWho/view?usp=drive_link)
+- [Resume](https://drive.google.com/file/d/1Mb10iDfYnIEhARx7CiUtK-NCotcfkWho/view?usp=drive_link)
 
 Listed below are the personal pages of friends and colleagues whose research and experiences have, in various ways, informed and enriched Junjie Ma's own work. Visitors are welcome to explore their pages at their leisure.
 
