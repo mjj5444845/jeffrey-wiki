@@ -10,8 +10,8 @@ Built with **Next.js 16** (App Router, fully static SSG) + **Markdown** files. K
 - Wikipedia-style floating infoboxes with dynamic age calculation
 - `[[wikilink]]` syntax for internal links
 - Auto-generated Table of Contents
-- Contact form that pre-fills a GitHub Issue (no backend required)
-- Friends navbox on the home page
+- Static Contact page (`/message`) with email and LinkedIn links
+- Friends navbox on the home page with an introductory paragraph
 
 ## Local Development & Build
 
@@ -32,6 +32,14 @@ npm run build
 
 Content lives in `content/wiki/`. Each `<slug>.md` file is one page. See `CLAUDE.md` for the full authoring guide.
 
-## GitHub Setup
+## Pages
 
-The contact form (`/message`) redirects to a pre-filled GitHub issue. For the `message` label to be applied automatically, create it in the repository: **Issues → Labels → New label → "message"**.
+| URL | Description |
+|---|---|
+| `/wiki/home` | Introduction — main landing page |
+| `/wiki/research` | Research interests and themes |
+| `/wiki/publications` | Papers and projects |
+| `/wiki/mentoring` | Mentoring and mentees |
+| `/wiki/teaching` | TA history |
+| `/wiki/miscellanea` | Personal miscellany |
+| `/message` | Contact page (email + LinkedIn) |

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import { getAllPagesMeta } from '@/lib/pages'
 import WikiLayout from '@/components/WikiLayout'
 
@@ -12,7 +13,7 @@ export default function ContactPage() {
       <div className="wiki-content-wrapper">
         <div className="wiki-tabs-row">
           <ul className="wiki-page-tabs">
-            <li className="wiki-page-tab"><a href="javascript:history.back()">← Back</a></li>
+            <li className="wiki-page-tab"><Link href="/wiki/home">← Main Page</Link></li>
           </ul>
         </div>
 

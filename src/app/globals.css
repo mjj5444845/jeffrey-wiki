@@ -661,14 +661,12 @@ a:hover { text-decoration: underline; }
   font-weight: bold;
   color: var(--wiki-text);
   vertical-align: middle;
-  border-top: 3px solid #fff;
 }
 
 /* List cell — specificity 0-3-2, beats reset */
 .wiki-content .wiki-navbox table td.wiki-navbox-list {
   text-align: left;
   padding: 0;
-  border-top: 3px solid #fff;
   border-left: 3px solid #fff;
 }
 .wiki-navbox-list > div {
@@ -681,10 +679,10 @@ a:hover { text-decoration: underline; }
   background-color: #f7f7f7;
 }
 
-/* No separator above the first data row — specificity 0-2-4 */
-.wiki-content .wiki-navbox table tr:nth-child(2) th.wiki-navbox-group,
-.wiki-content .wiki-navbox table tr:nth-child(2) td.wiki-navbox-list {
-  border-top: none;
+/* Separator between data rows (not above the first) */
+.wiki-content .wiki-navbox table tr:nth-child(n+3) th.wiki-navbox-group,
+.wiki-content .wiki-navbox table tr:nth-child(n+3) td.wiki-navbox-list {
+  border-top: 3px solid #fff;
 }
 
 .wiki-navbox a { color: var(--wiki-link); }
