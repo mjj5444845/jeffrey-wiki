@@ -17,7 +17,10 @@
       "PowerShell($env:PATH = [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"User\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"Machine\"\\); Set-Location \"d:\\\\github\\\\homepage\"; npm install remark-gfm 2>&1)",
       "Bash(powershell -Command ' *)",
       "Bash(python3)",
-      "Bash(python3 -c \"print\\('hello'\\)\")"
+      "Bash(python3 -c \"print\\('hello'\\)\")",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)"
     ]
   }
 }
