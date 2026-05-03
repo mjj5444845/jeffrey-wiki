@@ -2,7 +2,7 @@
 
 ## What is this
 
-JeffreyWiki is Junjie Ma's personal academic homepage, styled after Wikipedia. It serves as a knowledge base covering research interests, teaching experience, mentoring, and personal notes, and supports bilingual browsing (English / 中文).
+JeffreyWiki is the personal academic homepage of Junjie Ma (马骏杰), a Ph.D. student in Computer Science at George Mason University. The site is styled after Wikipedia and serves as a knowledge base covering research interests, publications, teaching experience, mentoring, and personal notes.
 
 Built with **Next.js 16** (App Router, fully static SSG) + **Markdown** files. Key features:
 
@@ -10,7 +10,8 @@ Built with **Next.js 16** (App Router, fully static SSG) + **Markdown** files. K
 - Wikipedia-style floating infoboxes with dynamic age calculation
 - `[[wikilink]]` syntax for internal links
 - Auto-generated Table of Contents
-- EN / ZH language toggle (persisted in localStorage)
+- Contact form that pre-fills a GitHub Issue (no backend required)
+- Friends navbox on the home page
 
 ## Local Development & Build
 
@@ -29,4 +30,8 @@ npm run dev
 npm run build
 ```
 
-Content lives in `content/wiki/`. Each `<slug>.md` file is an English page; a matching `<slug>.zh.md` provides the Chinese translation. See `CLAUDE.md` for the full authoring guide.
+Content lives in `content/wiki/`. Each `<slug>.md` file is one page. See `CLAUDE.md` for the full authoring guide.
+
+## GitHub Setup
+
+The contact form (`/message`) redirects to a pre-filled GitHub issue. For the `message` label to be applied automatically, create it in the repository: **Issues → Labels → New label → "message"**.

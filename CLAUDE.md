@@ -115,9 +115,11 @@ There is **no** "Edit" tab. There is **no** "From Junjie Ma's personal wiki" tag
 
 `src/app/message/page.tsx` renders a simple form (Title + Text + Send button) via `src/components/MessageForm.tsx`.
 
-On submit, it constructs a `mailto:jma26@gmu.edu?subject=...&body=...` URL and sets `window.location.href`. This opens the user's default email client — no backend required.
+On submit, it opens `https://github.com/mjj5444845/jeffrey-wiki/issues/new?title=...&body=...&labels=message` in a new tab, pre-filling the GitHub issue form. No backend required; the visitor needs a GitHub account to submit.
 
-All labels on the form are i18n'd via `useLanguage()` (`msgTitleLabel`, `msgTextLabel`, `msgSendBtn`, `msgNote`).
+The issues URL is centralized in `siteConfig.issuesUrl`. For the `message` label to auto-apply, it must exist in the GitHub repo (create it under Issues → Labels).
+
+All form labels are i18n'd via `useLanguage()` (`msgTitleLabel`, `msgTextLabel`, `msgSendBtn`, `msgNote`).
 
 ---
 

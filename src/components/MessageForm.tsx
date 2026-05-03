@@ -11,9 +11,12 @@ export default function MessageForm() {
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault()
-    const subject = encodeURIComponent(title.trim() || 'Message from JeffreyWiki')
-    const body = encodeURIComponent(text.trim())
-    window.location.href = `mailto:${siteConfig.email}?subject=${subject}&body=${body}`
+    const params = new URLSearchParams({
+      title: title.trim() || 'Message from JeffreyWiki',
+      body: text.trim(),
+      labels: 'message',
+    })
+    window.open(`${siteConfig.issuesUrl}/new?${params}`, '_blank', 'noopener,noreferrer')
   }
 
   return (

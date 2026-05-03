@@ -22,7 +22,7 @@ export const i18n = {
     msgTitleLabel: 'Title',
     msgTextLabel: 'Message',
     msgSendBtn: 'Send',
-    msgNote: 'Clicking Send will open your default email application.',
+    msgNote: 'Clicking Send will open a GitHub issue form in a new tab. A GitHub account is required.',
   },
 } as const
 
