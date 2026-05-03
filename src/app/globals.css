@@ -681,9 +681,9 @@ a:hover { text-decoration: underline; }
   background-color: #f7f7f7;
 }
 
-/* Separator between data rows (not above the first) */
-.wiki-content .wiki-navbox table tr:nth-child(n+3) th.wiki-navbox-group,
-.wiki-content .wiki-navbox table tr:nth-child(n+3) td.wiki-navbox-list {
+/* Separator above every data row (including the first, below the title) */
+.wiki-content .wiki-navbox table tr:nth-child(n+2) th.wiki-navbox-group,
+.wiki-content .wiki-navbox table tr:nth-child(n+2) td.wiki-navbox-list {
   border-top: 3px solid #fff;
 }
 
