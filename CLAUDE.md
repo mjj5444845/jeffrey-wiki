@@ -12,6 +12,8 @@ This is the personal academic homepage of **Junjie Ma (马骏杰, Jeffrey)**, a 
 **Advisor:** Dr. Zhicong Lu  
 **Email:** jma26@gmu.edu
 
+This site is inspired by Andrej Karpathy's [LLM Wiki pattern](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f): `content/wiki/` is the LLM-maintained wiki artifact, and `CLAUDE.md` is the schema that tells the LLM how to maintain it. Content updates are handled conversationally — describe the change, and the LLM writes, cross-references, and keeps the wiki consistent. **Keep `CLAUDE.md` updated whenever site conventions change** — it is the contract between the owner and the LLM.
+
 ---
 
 ## Technology Stack
@@ -130,9 +132,7 @@ Use `[[Page Name]]` anywhere in markdown body to create an internal link. The sl
 |---|---|
 | `[[Research]]` | `/wiki/research` |
 | `[[Publications]]` | `/wiki/publications` |
-| `[[Research\|研究]]` | `/wiki/research`, displays "研究" |
-
-In Chinese files, always use `[[EnglishSlug\|中文显示文字]]` so the link resolves correctly.
+| `[[Research\|Custom Text]]` | `/wiki/research`, displays "Custom Text" |
 
 ---
 
@@ -144,15 +144,15 @@ In Chinese files, always use `[[EnglishSlug\|中文显示文字]]` so the link r
 ### Lists (bullet points)
 - **No bullet or numbered lists in the article body.** Convert them to flowing prose paragraphs.
 - Lists are **only permitted** in these sections:
-  - `## See Also` / `## 参见`
-  - `## External Links` / `## 外部链接`
-  - `## References` / `## 参考文献`
-  - `## Footnotes` / `## 注释`
+  - `## See Also`
+  - `## External Links`
+  - `## References`
+  - `## Footnotes`
 - Tables are allowed anywhere and are the preferred format for structured data.
 
 ### Tone
 - Academic: precise, neutral, no marketing language.
-- Emoji is allowed in External Links sections only (📧 🎓 💼 etc.).
+- No emoji anywhere on the site.
 
 ### Section structure (recommended order)
 1. Opening paragraph (no heading — the first paragraph is the lead)
@@ -220,7 +220,7 @@ const siteConfig = {
 } as const
 ```
 
-Do **not** hardcode the site name, email, or these URLs elsewhere — always import from `siteConfig`.
+Do **not** hardcode the site name, email, or URLs elsewhere — always import from `siteConfig`. The `issuesUrl` field was removed when the contact page switched to a static page.
 
 ---
 
@@ -242,6 +242,20 @@ UI strings live in `src/lib/i18n.ts`. English-only. Type: `I18n = Record<keyof t
 
 Key i18n entries:
 - `tabRead`, `tabMessage`, `tabHistory` — article tab labels (`tabMessage` renders as "Contact")
+
+---
+
+## Content Update Workflow
+
+This wiki follows the LLM Wiki pattern: the owner provides content direction; the LLM handles writing, formatting, and cross-referencing.
+
+**To add or update content on a page:** Describe the facts or changes in plain language. The LLM writes the prose in third-person academic style, respects all conventions in this file, and updates any related cross-references (See Also, wikilinks on other pages).
+
+**To add a new page:** Provide the slug, title, and key content. The LLM creates the `.md` file with correct front matter, writes the body, and links it from related pages' See Also sections.
+
+**To health-check the wiki (lint):** Ask the LLM to review the wiki for stale content, missing cross-references, orphan pages, or inconsistencies between pages.
+
+**Cross-referencing rule:** When content on one page is relevant to another, always add or update the See Also section on both sides. The wiki's value comes from its interconnections.
 
 ---
 
