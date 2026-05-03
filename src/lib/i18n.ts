@@ -17,7 +17,6 @@ export const i18n = {
     navMainPage: 'Main page',
     footerAbout: 'About',
     footerAllPages: 'All pages',
-    footerText: 'Junjie Ma · George Mason University · Built with Next.js + Markdown',
   },
 } as const
 

@@ -4,6 +4,10 @@
 
 JeffreyWiki is the personal academic homepage of Junjie Ma (马骏杰), a Ph.D. student in Computer Science at George Mason University. The site is styled after Wikipedia and serves as a knowledge base covering research interests, publications, teaching experience, mentoring, and personal notes.
 
+## Inspiration
+
+Junjie Ma has substantial research experience on Wikipedia and Wikidata, and continues to hold a deep interest in the wiki ecosystem. This homepage was inspired by [Andrej Karpathy](https://karpathy.ai/) and his [LLM.md post](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f) — a wiki-style document organizing knowledge about large language models — alongside a long-standing personal affinity for the wiki format as a medium for structured, interconnected knowledge.
+
 Built with **Next.js 16** (App Router, fully static SSG) + **Markdown** files. Key features:
 
 - Front matter (YAML metadata per page)

@@ -42,7 +42,12 @@ export default function WikiLayout({ children, pages }: Props) {
           <li><a href="/wiki/home">{t.footerAbout}</a></li>
           <li><a href="/wiki/index">{t.footerAllPages}</a></li>
         </ul>
-        <p className="wiki-footer-text">{t.footerText}</p>
+        <p className="wiki-footer-text">
+          Junjie Ma · George Mason University · Inspired by{' '}
+          <a href="https://karpathy.ai/" target="_blank" rel="noopener noreferrer">Andrej Karpathy</a>
+          {' '}and his{' '}
+          <a href="https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f" target="_blank" rel="noopener noreferrer">Post</a>
+        </p>
       </footer>
     </div>
   )
