@@ -20,7 +20,10 @@
       "Bash(python3 -c \"print\\('hello'\\)\")",
       "Bash(git add *)",
       "Bash(git commit -m ' *)",
-      "Bash(git push *)"
+      "Bash(git push *)",
+      "WebFetch(domain:gist.github.com)",
+      "WebFetch(domain:gist.githubusercontent.com)",
+      "Bash(curl -s \"https://gist.githubusercontent.com/karpathy/442a6bf555914893e9891c11519de94f/raw/\")"
     ]
   }
 }

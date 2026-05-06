@@ -11,6 +11,7 @@ Junjie Ma is committed to supporting motivated students who are entering researc
 | Name | Period | Affiliation |
 |---|---|---|
 | Zhe Tan | 2025 – present | Undergraduate, George Mason University; incoming M.S. student, University of Illinois Urbana-Champaign (Fall 2026) |
+| Mingyuan Li | 2026 – present | Master Student, University of Pennsylvania |
 
 ## See Also
 
