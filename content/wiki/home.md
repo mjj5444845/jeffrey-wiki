@@ -22,7 +22,7 @@ Junjie Ma received both his Master's degree and Bachelor's degree in Computer Sc
 
 ## Research
 
-His research lies in **Human-Computer Interaction (HCI)**, with a methodological focus on the intersection of HCI, Robotics, and Extended Reality. Core themes include cultural dimensions of technology use, multilingual interaction, and Cultural AI. See [[Research]] for the full statement.
+His research sits within **Human-Computer Interaction (HCI)**, with a focus on Human-Robot Interaction (HRI) and Human-AI Interaction. He studies personalized narrative mechanisms for Embodied AI, with core themes spanning Expression Mechanisms, Cultural AI, and Multilingualism. See [[Research]] for the full statement.
 
 ## News
 
