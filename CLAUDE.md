@@ -154,6 +154,10 @@ Use `[[Page Name]]` anywhere in markdown body to create an internal link. The sl
 - Academic: precise, neutral, no marketing language.
 - No emoji anywhere on the site.
 
+### News section
+- News items go in `## News` on `home.md`, newest entry first (reverse chronological).
+- Format: `**MM/DD/YYYY** — One-sentence description.`
+
 ### Section structure (recommended order)
 1. Opening paragraph (no heading — the first paragraph is the lead)
 2. Body sections (`##`)

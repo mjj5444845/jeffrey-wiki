@@ -26,6 +26,8 @@ His research sits within **Human-Computer Interaction (HCI)**, with a focus on H
 
 ## News
 
+**05/06/2026** — Junjie Ma was invited to present his ongoing HRI research at the [FIGX Lab](https://fig-x.github.io/), University of Maryland, College Park.
+
 **04/23/2026** — Junjie Ma was invited to showcase his HRI research at Microsoft's "Bring Your Family to Work Day" (Reston Office).
 
 ## See Also
