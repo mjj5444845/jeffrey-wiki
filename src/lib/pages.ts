@@ -6,7 +6,7 @@ import type { WikiPage, WikiPageMeta, WikiFrontMatter } from '@/types/wiki'
 
 const WIKI_DIR = path.join(process.cwd(), 'content', 'wiki')
 
-const PAGE_ORDER = ['home', 'research', 'publications', 'mentoring', 'teaching', 'miscellanea']
+const PAGE_ORDER = ['home', 'research', 'publications', 'mentoring', 'teaching', 'service', 'miscellanea']
 
 export function getAllSlugs(): string[] {
   if (!fs.existsSync(WIKI_DIR)) return []

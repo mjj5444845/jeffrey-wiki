@@ -36,6 +36,7 @@ His research sits within **Human-Computer Interaction (HCI)**, with a focus on H
 - [[Publications]] — Papers and projects
 - [[Teaching]] — Courses taught
 - [[Mentoring]] — Working with students
+- [[Service]] — Peer review and academic service
 - [[Miscellanea]] — Personal miscellany
 
 ## External Links

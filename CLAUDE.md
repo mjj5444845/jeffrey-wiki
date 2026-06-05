@@ -44,6 +44,7 @@ All pages live as Markdown files in `content/wiki/`. The file name (without `.md
 | `publications.md` | `/wiki/publications` | Papers and projects |
 | `teaching.md` | `/wiki/teaching` | TA history at U of M |
 | `mentoring.md` | `/wiki/mentoring` | Mentoring and mentees |
+| `service.md` | `/wiki/service` | Peer review and academic service |
 | `miscellanea.md` | `/wiki/miscellanea` | Personal miscellany |
 
 - The root `/` redirects to `/wiki/home`.
