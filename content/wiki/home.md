@@ -26,6 +26,8 @@ His research sits within **Human-Computer Interaction (HCI)**, with a focus on H
 
 ## News
 
+**05/25/2026** — Junjie Ma joined the [STIP AVATAR project](https://provost.gmu.edu/academics/undergraduate-education/mason-impact/summer-team-impact-projects) at George Mason University as a Graduate Research Assistant, supporting the development of an adaptive VR and mobile therapeutic system for behavioral health relapse prevention.
+
 **05/06/2026** — Junjie Ma was invited to present his ongoing HRI research at the [FIGX Lab](https://fig-x.github.io/), University of Maryland, College Park.
 
 **04/23/2026** — Junjie Ma was invited to showcase his HRI research at Microsoft's "Bring Your Family to Work Day" (Reston Office).
