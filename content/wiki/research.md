@@ -20,6 +20,10 @@ Across different cultural contexts, Embodied AI must be sensitive and adaptable 
 
 In globally deployed and cross-cultural contexts, multilingual capability is a key factor in how broadly useful Embodied AI can be. Junjie Ma's research addresses the barriers that arise in cross-language narration, aiming to maintain semantic equivalence and minimize information loss across languages. The focus is not only on accurate language conversion, but on keeping narrative style consistent and culturally appropriate across different language environments, so that interaction remains smooth and coherent.
 
+## Broader HCI Interests
+
+Beyond the core focus on Embodied AI, Junjie Ma has engaged with a wider range of projects across Human-Computer Interaction. These projects do not fall neatly under the themes of Expression Mechanisms, Cultural AI, or Multilingualism, yet each reflects a genuine curiosity about how people interact with technology and with one another through it. Topics explored include peer production and collaborative knowledge construction, algorithmic and model efficiency in sociotechnical systems, data engineering practices, and bias in data and computational models. Taken together, they reflect an interest in HCI as a broad and pluralistic discipline — one in which diverse problems, methods, and communities of practice continually inform one another.
+
 ## Advisors and Affiliations
 
 | Role | Person / Institution |
