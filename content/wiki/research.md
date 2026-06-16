@@ -28,7 +28,7 @@ Beyond the core focus on Embodied AI, Junjie Ma has engaged with a wider range o
 
 | Role | Person / Institution |
 |---|---|
-| Ph.D. Advisor | [Dr. Zhicong Lu](https://luzhc.github.io/), George Mason University |
+| Ph.D. Advisor | [Dr. Zhicong Lu](https://luzhc.github.io/), [DEER Lab](https://deerlab.vercel.app/), George Mason University |
 | M.S. / B.S. Advisors | [Dr. Loren Terveen](https://lorenterveen.com/) and [Dr. Stevie Chancellor](https://steviechancellor.com/), University of Minnesota |
 
 ## See Also
