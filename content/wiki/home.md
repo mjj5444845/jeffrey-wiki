@@ -24,13 +24,9 @@ Junjie Ma received both his Master's degree and Bachelor's degree in Computer Sc
 
 His research sits within **Human-Computer Interaction (HCI)**, with a focus on Human-Robot Interaction (HRI) and Human-AI Interaction. He studies personalized narrative mechanisms for Embodied AI, with core themes spanning Expression Mechanisms, Cultural AI, and Multilingualism. See [[Research]] for the full statement.
 
-## News
+## PhD, Year One (2025–2026)
 
-**05/25/2026** — Junjie Ma joined the [STIP AVATAR project](https://provost.gmu.edu/academics/undergraduate-education/mason-impact/summer-team-impact-projects) at George Mason University as a Graduate Research Assistant, supporting the development of an adaptive VR and mobile therapeutic system for behavioral health relapse prevention.
-
-**05/06/2026** — Junjie Ma was invited to present his ongoing HRI research at the [FIGX Lab](https://fig-x.github.io/), University of Maryland, College Park.
-
-**04/23/2026** — Junjie Ma was invited to showcase his HRI research at Microsoft's "Bring Your Family to Work Day" (Reston Office).
+During his first year in the Ph.D. program at George Mason University, Junjie Ma established his research focus on Human-Robot Interaction and began building connections across the field. In April 2026, he was invited to showcase his HRI research at Microsoft's "Bring Your Family to Work Day" at the company's Reston office. The following month, he presented his work at the [FIGX Lab](https://fig-x.github.io/) at the University of Maryland, College Park. Also in May 2026, he joined the [STIP AVATAR project](https://provost.gmu.edu/academics/undergraduate-education/mason-impact/summer-team-impact-projects) at George Mason University as a Graduate Research Assistant, contributing to the development of an adaptive VR and mobile therapeutic system for behavioral health relapse prevention.
 
 ## See Also
 

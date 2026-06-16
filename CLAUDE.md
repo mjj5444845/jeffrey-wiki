@@ -155,9 +155,11 @@ Use `[[Page Name]]` anywhere in markdown body to create an internal link. The sl
 - Academic: precise, neutral, no marketing language.
 - No emoji anywhere on the site.
 
-### News section
-- News items go in `## News` on `home.md`, newest entry first (reverse chronological).
-- Format: `**MM/DD/YYYY** — One-sentence description.`
+### Biography sections
+- Career/life events go in year-based sections on `home.md`, modeled after Wikipedia biography articles (e.g., the [Lu Xun article](https://en.wikipedia.org/wiki/Lu_Xun)).
+- Section headings follow the pattern `## PhD, Year One (2025–2026)`, `## PhD, Year Two (2026–2027)`, etc.
+- Events within each section are written as flowing prose paragraphs in third person — no bullet points or date stamps.
+- When adding a new event: add it to the appropriate year section as a sentence or short paragraph integrated with the existing prose. Start a new year section when the academic year turns over.
 
 ### Section structure (recommended order)
 1. Opening paragraph (no heading — the first paragraph is the lead)
