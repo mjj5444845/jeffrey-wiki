@@ -51,7 +51,7 @@ All pages live as Markdown files in `content/wiki/`. The file name (without `.md
 - The root `/` redirects to `/wiki/home`.
 - `/wiki/index` auto-generates an alphabetical index of all pages.
 - `/message` is the contact page (not a wiki page).
-- Paper overview pages use a short title, an infobox, concise neutral sections, and references. The EMNLP 2026 overview appears immediately after Publications in the sidebar and is linked from Research's Cultural AI section.
+- Paper overview pages use a short title, an infobox, concise neutral sections, and references. The EMNLP 2026 overview appears under Pages in the sidebar and is linked from Research's Cultural AI section.
 - SIGCSE TS 2027 is currently an acceptance announcement only; do not publish its manuscript or details without the owner's instruction.
 
 ---
@@ -239,8 +239,8 @@ Do **not** hardcode the site name, email, or URLs elsewhere — always import fr
 The sidebar has **no wordmark section** — the `wiki-nav-wordmark` div was removed. The first nav section uses class `wiki-nav-section-first` to add top padding.
 
 Sections:
-1. **Navigation** — Main Page link only
-2. **Pages** — all wiki pages from `getAllPagesMeta()`
+1. **Navigation** — Main page, Research, Publications, Mentoring, Teaching, Academic Service, and Miscellanea. Section slugs and their order are configured in `siteConfig.navigationSlugs`.
+2. **Pages** — individual items, such as the EMNLP paper overview. All wiki pages outside `siteConfig.navigationSlugs` appear here automatically; section pages are not repeated.
 
 There is **no** "All pages" link in the sidebar.
 

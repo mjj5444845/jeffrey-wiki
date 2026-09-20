@@ -1,12 +1,13 @@
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
+import siteConfig from './siteConfig'
 import { processMarkdown, slugify } from './markdown'
 import type { WikiPage, WikiPageMeta, WikiFrontMatter } from '@/types/wiki'
 
 const WIKI_DIR = path.join(process.cwd(), 'content', 'wiki')
 
-const PAGE_ORDER = ['home', 'research', 'publications', 'you-really-didnt-get-that', 'mentoring', 'teaching', 'service', 'miscellanea']
+const PAGE_ORDER = siteConfig.navigationSlugs
 
 export function getAllSlugs(): string[] {
   if (!fs.existsSync(WIKI_DIR)) return []
