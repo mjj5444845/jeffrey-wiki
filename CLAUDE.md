@@ -42,6 +42,7 @@ All pages live as Markdown files in `content/wiki/`. The file name (without `.md
 | `home.md` | `/wiki/home` | Main landing page |
 | `research.md` | `/wiki/research` | Research interests |
 | `publications.md` | `/wiki/publications` | Papers and projects |
+| `you-really-didnt-get-that.md` | `/wiki/you-really-didnt-get-that` | EMNLP 2026 paper overview |
 | `teaching.md` | `/wiki/teaching` | TA history at U of M |
 | `mentoring.md` | `/wiki/mentoring` | Mentoring and mentees |
 | `service.md` | `/wiki/service` | Peer review and academic service |
@@ -50,6 +51,8 @@ All pages live as Markdown files in `content/wiki/`. The file name (without `.md
 - The root `/` redirects to `/wiki/home`.
 - `/wiki/index` auto-generates an alphabetical index of all pages.
 - `/message` is the contact page (not a wiki page).
+- Paper overview pages use a short title, an infobox, concise neutral sections, and references. The EMNLP 2026 overview appears immediately after Publications in the sidebar and is linked from Research's Cultural AI section.
+- SIGCSE TS 2027 is currently an acceptance announcement only; do not publish its manuscript or details without the owner's instruction.
 
 ---
 

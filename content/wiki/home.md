@@ -28,6 +28,8 @@ His research sits within **Human-Computer Interaction (HCI)**, with a focus on H
 
 During his first year in the Ph.D. program at George Mason University, Junjie Ma established his research focus on Human-Robot Interaction and began building connections across the field. In April 2026, he was invited to showcase his HRI research at Microsoft's "Bring Your Family to Work Day" at the company's Reston office. The following month, he presented his work at the [FIGX Lab](https://fig-x.github.io/) at the University of Maryland, College Park. Also in May 2026, he joined the [STIP AVATAR project](https://provost.gmu.edu/academics/undergraduate-education/mason-impact/summer-team-impact-projects) at George Mason University as a Graduate Research Assistant, contributing to the development of an adaptive VR and mobile therapeutic system for behavioral health relapse prevention.
 
+His first-year research also led to two accepted papers: [[You Really Didnt Get That|You Really Didn't Get That?]], accepted to the EMNLP 2026 Main Conference, and a paper accepted to SIGCSE TS 2027.
+
 ## See Also
 
 - [[Research]] — Research interests and themes

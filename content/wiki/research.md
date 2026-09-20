@@ -16,6 +16,8 @@ Research on expression mechanisms for Embodied AI spans many directions. Junjie 
 
 Across different cultural contexts, Embodied AI must be sensitive and adaptable enough to behave appropriately with people from varied ethnic and cultural backgrounds. Junjie Ma's work in this area centers on two mechanisms: how user communities can configure and customize Embodied AI behavior; and how Embodied AI can learn and apply cross-cultural behavioral norms through contextual awareness and ongoing interaction.
 
+Related work includes [[You Really Didnt Get That|You Really Didn't Get That?]], co-authored by Junjie Ma and accepted to the EMNLP 2026 Main Conference. The study examines how large language models interpret indirect and playful Chinese online comments in their conversational and cultural context.
+
 ## Multilingualism
 
 In globally deployed and cross-cultural contexts, multilingual capability is a key factor in how broadly useful Embodied AI can be. Junjie Ma's research addresses the barriers that arise in cross-language narration, aiming to maintain semantic equivalence and minimize information loss across languages. The focus is not only on accurate language conversion, but on keeping narrative style consistent and culturally appropriate across different language environments, so that interaction remains smooth and coherent.
@@ -34,5 +36,6 @@ Beyond the core focus on Embodied AI, Junjie Ma has engaged with a wider range o
 ## See Also
 
 - [[Publications]] — Papers and projects arising from this work
+- [[You Really Didnt Get That|You Really Didn't Get That?]] — Social pragmatic inference in Chinese online discourse
 - [[Teaching]] — Courses related to these themes
 - [[Home]] — Back to main page
