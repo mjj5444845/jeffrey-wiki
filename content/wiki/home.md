@@ -14,7 +14,7 @@ infobox:
   Occupation: Ph.D. Student
 ---
 
-**Junjie Ma** (马骏杰, also known as Jeffrey) is a Ph.D. student in the [Department of Computer Science](https://cs.gmu.edu/) at [George Mason University](https://www.gmu.edu/), advised by [Dr. Zhicong Lu](https://luzhc.github.io/) in the [DEER Lab](https://deerlab.vercel.app/).
+**Junjie Ma** (马骏杰, also known as Jeffrey) is a Ph.D. student in the [Department of Computer Science](https://cs.gmu.edu/) at [George Mason University](https://www.gmu.edu/), advised by [Dr. Zhicong Lu](https://luzhc.github.io/) in the [DEER Lab](https://deerlab22030.github.io/deerlab/#/).
 
 ## Academic Background
 
@@ -40,7 +40,7 @@ His first-year research also led to two accepted papers: [[You Really Didnt Get 
 - [[Miscellanea]] — Personal miscellany
 
 ## External Links
-- [DEER Lab](https://deerlab.vercel.app/) — Research lab at George Mason University
+- [DEER Lab](https://deerlab22030.github.io/deerlab/#/) — Research lab at George Mason University
 - [Resume](https://drive.google.com/file/d/1Mb10iDfYnIEhARx7CiUtK-NCotcfkWho/view?usp=drive_link)
 
 Listed below are the personal pages of friends and colleagues whose research and experiences have, in various ways, informed and enriched Junjie Ma's own work. Visitors are welcome to explore their pages at their leisure.
