@@ -88,8 +88,9 @@ Check that targets exist when adding or renaming articles.
 ## Validation and maintenance
 
 Use `npm ci` to install the locked dependencies on the current OS; do not copy
-`node_modules` between operating systems. See README for Node requirements.
+`node_modules` between operating systems. Requires Node.js 20.9 or later and npm.
 Run `npm run lint` and `npm run build` after code changes. For content changes,
 also check front matter, internal links, referenced images, and related articles.
 Keep personal permissions, absolute machine paths, generated files, and credentials
-out of Git. Update this guide when conventions change and README when setup changes.
+out of Git. Keep setup and maintenance instructions in this guide; README stays
+limited to the personal-homepage description, LLM Wiki inspiration, and MIT license.
