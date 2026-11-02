@@ -4,7 +4,7 @@ description: Ph.D. student in Computer Science at George Mason University
 tags: [homepage]
 infobox:
   title: Junjie Ma (马骏杰)
-  image: /profile.png
+  image: /profile.jpg
   imageCaption: Junjie Ma · George Mason University
   Born: "December 1996 {age:1996-12}"
   Residence: "Fairfax, Virginia, U.S."
@@ -28,7 +28,7 @@ His research sits within **Human-Computer Interaction (HCI)**, with a focus on H
 
 During his first year in the Ph.D. program at George Mason University, Junjie Ma established his research focus on Human-Robot Interaction and began building connections across the field. In April 2026, he was invited to showcase his HRI research at Microsoft's "Bring Your Family to Work Day" at the company's Reston office. The following month, he presented his work at the [FIGX Lab](https://fig-x.github.io/) at the University of Maryland, College Park. Also in May 2026, he joined the [STIP AVATAR project](https://provost.gmu.edu/academics/undergraduate-education/mason-impact/summer-team-impact-projects) at George Mason University as a Graduate Research Assistant, contributing to the development of an adaptive VR and mobile therapeutic system for behavioral health relapse prevention.
 
-His first-year research also led to two accepted papers: [[You Really Didnt Get That|You Really Didn't Get That?]], accepted to the EMNLP 2026 Main Conference, and a paper accepted to SIGCSE TS 2027.
+His first-year research also led to two accepted papers: [[You Really Didnt Get That|You Really Didn't Get That?]], accepted to the EMNLP 2026 Main Conference, and *NKI Teaching Lab: An Accelerator-Free Toolchain for Learning Tile-Level AI Accelerator Programming*, accepted to SIGCSE TS 2027, the ACM Technical Symposium on Computer Science Education. See [[Publications]] for the full author lists.
 
 ## See Also
 
@@ -51,7 +51,8 @@ Listed below are the personal pages of friends and colleagues whose research and
 <tr>
 <th class="wiki-navbox-group">HCI</th>
 <td class="wiki-navbox-list"><div>
-<a href="https://chuankaizhang.com/#/">Charles Chuankai Zhang</a>
+<a href="https://chuankaizhang.com/#/">Charles Chuankai Zhang</a> ·
+<a href="https://shiwei-hong.github.io">Shiwei Hong</a>
 </div></td>
 </tr>
 <tr>

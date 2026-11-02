@@ -52,7 +52,7 @@ tags: [research]
 `title` is required. Optional keys are `description` (string), `tags` (string array),
 and `infobox` (mapping of string values). Infobox reserves `title`, `image`, and
 `imageCaption`; other keys become table rows with camelCase labels split into words.
-Image paths start at `public/`, e.g. `/profile.png`. Infobox values support
+Image paths start at `public/`, e.g. `/profile.jpg`. Infobox values support
 `{age:YYYY-MM}`, `[label](url)`, and literal `\n` for line breaks.
 
 Start the body with a lead paragraph or `##`, never `#`; the title is already an h1.
@@ -69,8 +69,9 @@ Check that targets exist when adding or renaming articles.
 - Biography updates belong in the relevant academic-year section on `home.md`,
   e.g. `## PhD, Year One (2025–2026)`, as integrated prose without date stamps.
 - Paper overviews use a short title, infobox, concise neutral sections, and references.
-- SIGCSE TS 2027 is an acceptance announcement only: do not publish its manuscript
-  or details without the owner's instruction.
+- The SIGCSE TS 2027 NKI Teaching Lab title, author list, and acceptance venue are
+  approved for publication. Do not add a manuscript or further unpublished details
+  without the owner's instruction.
 - Add relevant reciprocal See Also links when updating related articles. Do not
   invent facts or delete substantive articles merely because they are rarely linked.
 - Keep the Friends navbox last on `home.md`. Reuse its existing HTML structure and

@@ -10,6 +10,7 @@ Junjie Ma contributes to the academic community through peer review at leading v
 
 | Year | Venue | Role |
 |---|---|---|
+| 2027 | CHI 2027 — ACM Conference on Human Factors in Computing Systems | Reviewer |
 | 2026 | [CSCW 2026](https://cscw.acm.org/2026/) — ACM Conference on Computer-Supported Cooperative Work and Social Computing | Reviewer |
 
 ## See Also

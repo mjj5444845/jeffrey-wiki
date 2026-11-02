@@ -10,7 +10,7 @@ Junjie Ma's publications include work in natural language processing and computi
 
 **EMNLP 2026 (Main Conference).** Shiwei Hong, Junjie Ma, Emma Jiren Wang, Ethan Z. Rong, Siying Hu, Haichang Li, Ziying Wang, and Zhicong Lu. *You Really Didn't Get That? Benchmarking Social Pragmatic Inference for Indirect and Playful Chinese Online Comments.* See the [[You Really Didnt Get That|paper overview]] and [arXiv preprint](https://arxiv.org/abs/2609.04384).
 
-**SIGCSE TS 2027.** Junjie Ma also co-authored a paper accepted to SIGCSE TS 2027.
+**SIGCSE TS 2027 (ACM Technical Symposium on Computer Science Education).** Jialiang Gu, Junjie Ma, Thai-Hoa Nguyen, Hao Wu, Zhicong Lu, Shuyin Jiao, Binqian Yin, and Keren Zhou. *NKI Teaching Lab: An Accelerator-Free Toolchain for Learning Tile-Level AI Accelerator Programming.* Accepted.
 
 ## External Links
 

@@ -1,12 +1,18 @@
 ---
 title: Teaching
-description: Teaching assistant experience at the University of Minnesota
+description: Guest lectures at George Mason University and teaching assistant experience at the University of Minnesota
 tags: [teaching, academia]
 ---
 
-Junjie Ma served as a teaching assistant at the [University of Minnesota, Twin Cities](https://twin-cities.umn.edu/) during his graduate studies. His courses spanned programming principles, human-computer interaction, and social computing.
+Junjie Ma's teaching experience includes a guest lecture at George Mason University and teaching assistant roles at the University of Minnesota, Twin Cities.
+
+## George Mason University
+
+Junjie Ma delivered a guest lecture on **Community Design** in **SWE 632 — User Interface Design & Development** at George Mason University.
 
 ## University of Minnesota, Twin Cities
+
+Junjie Ma served as a teaching assistant at the [University of Minnesota, Twin Cities](https://twin-cities.umn.edu/) during his graduate studies. His courses spanned programming principles, human-computer interaction, and social computing.
 
 | Role | Course |
 |---|---|
