@@ -6,11 +6,11 @@ tags: [research, publications]
 
 Junjie Ma's publications include work in natural language processing and computing education.
 
-## Accepted Papers
+## Publications and Forthcoming Papers
 
-**EMNLP 2026 (Main Conference).** Shiwei Hong, Junjie Ma, Emma Jiren Wang, Ethan Z. Rong, Siying Hu, Haichang Li, Ziying Wang, and Zhicong Lu. *You Really Didn't Get That? Benchmarking Social Pragmatic Inference for Indirect and Playful Chinese Online Comments.* See the [[You Really Didnt Get That|paper overview]] and [arXiv preprint](https://arxiv.org/abs/2609.04384).
+Shiwei Hong, Junjie Ma, Emma Jiren Wang, Ethan Z. Rong, Siying Hu, Haichang Li, Ziying Wang, and Zhicong Lu. 2026. [You Really Didn’t Get That? Benchmarking Social Pragmatic Inference for Indirect and Playful Chinese Online Comments](https://aclanthology.org/2026.emnlp-main.846/). In *Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing (EMNLP 2026)*. Association for Computational Linguistics, Budapest, Hungary, 19623–19640. [https://doi.org/10.18653/2026.emnlp-main.846](https://doi.org/10.18653/2026.emnlp-main.846). See the [[You Really Didnt Get That|paper overview]].
 
-**SIGCSE TS 2027 (ACM Technical Symposium on Computer Science Education).** Jialiang Gu, Junjie Ma, Thai-Hoa Nguyen, Hao Wu, Zhicong Lu, Shuyin Jiao, Binqian Yin, and Keren Zhou. *NKI Teaching Lab: An Accelerator-Free Toolchain for Learning Tile-Level AI Accelerator Programming.* Accepted.
+Jialiang Gu, Junjie Ma, Thai-Hoa Nguyen, Hao Wu, Zhicong Lu, Shuyin Jiao, Binqian Yin, and Keren Zhou. 2027. NKI Teaching Lab: An Accelerator-Free Toolchain for Learning Tile-Level AI Accelerator Programming. In *ACM Technical Symposium on Computer Science Education (SIGCSE TS 2027)*. To appear.
 
 ## External Links
 

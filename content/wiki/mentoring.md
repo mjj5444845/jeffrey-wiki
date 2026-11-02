@@ -1,6 +1,6 @@
 ---
 title: Mentoring
-description: Mentoring philosophy and current mentees
+description: Mentoring philosophy and current and past mentees
 tags: [mentoring, students]
 ---
 
@@ -10,8 +10,13 @@ Junjie Ma is committed to supporting motivated students who are entering researc
 
 | Name | Period | Affiliation |
 |---|---|---|
-| Zhe Tan | 2025 – present | Undergraduate, George Mason University; incoming M.S. student, University of Illinois Urbana-Champaign (Fall 2026) |
 | Mingyuan Li | 2026 – present | Master Student, University of Pennsylvania |
+
+## Past Mentees
+
+| Name | Period | Affiliation |
+|---|---|---|
+| Zhe Tan | 2025 – 2026 | M.S. student, University of Illinois Urbana-Champaign |
 
 ## See Also
 

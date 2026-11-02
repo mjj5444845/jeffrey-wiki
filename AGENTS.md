@@ -69,6 +69,10 @@ Check that targets exist when adding or renaming articles.
 - Biography updates belong in the relevant academic-year section on `home.md`,
   e.g. `## PhD, Year One (2025–2026)`, as integrated prose without date stamps.
 - Paper overviews use a short title, infobox, concise neutral sections, and references.
+- Use ACM reference format for publications: full authors, year, title, italicized
+  proceedings, publisher, location, pages, and DOI when available. Prefer official
+  publication records over preprints; mark accepted work as forthcoming and do not
+  invent missing bibliographic fields.
 - The SIGCSE TS 2027 NKI Teaching Lab title, author list, and acceptance venue are
   approved for publication. Do not add a manuscript or further unpublished details
   without the owner's instruction.

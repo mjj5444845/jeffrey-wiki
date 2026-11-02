@@ -6,12 +6,12 @@ infobox:
   title: You Really Didn't Get That?
   Venue: EMNLP 2026
   Track: Main Conference
-  Status: Accepted
+  Status: Published
   Topic: Social pragmatic inference
-  Preprint: "[arXiv:2609.04384](https://arxiv.org/abs/2609.04384)"
+  Publication: "[ACL Anthology](https://aclanthology.org/2026.emnlp-main.846/)"
 ---
 
-**You Really Didn't Get That? Benchmarking Social Pragmatic Inference for Indirect and Playful Chinese Online Comments** is a research paper co-authored by [[Home|Junjie Ma]] and accepted to the EMNLP 2026 Main Conference. It investigates whether large language models can infer what a speaker means through indirect or playful comments in Chinese online conversations.[¹](#reference-1)
+**You Really Didn't Get That? Benchmarking Social Pragmatic Inference for Indirect and Playful Chinese Online Comments** is a research paper co-authored by [[Home|Junjie Ma]] and published in the proceedings of the EMNLP 2026 Main Conference. It investigates whether large language models can infer what a speaker means through indirect or playful comments in Chinese online conversations.[¹](#reference-1)
 
 ## Background
 
@@ -35,4 +35,4 @@ The strongest model achieved 81.42% accuracy on questions written by other model
 
 <span id="reference-1"></span>
 
-- Hong, Shiwei; Ma, Junjie; Wang, Emma Jiren; Rong, Ethan Z.; Hu, Siying; Li, Haichang; Wang, Ziying; and Lu, Zhicong (2026). [You Really Didn't Get That? Benchmarking Social Pragmatic Inference for Indirect and Playful Chinese Online Comments](https://arxiv.org/abs/2609.04384). arXiv:2609.04384. Accepted to EMNLP 2026, Main Conference.
+- Shiwei Hong, Junjie Ma, Emma Jiren Wang, Ethan Z. Rong, Siying Hu, Haichang Li, Ziying Wang, and Zhicong Lu. 2026. [You Really Didn’t Get That? Benchmarking Social Pragmatic Inference for Indirect and Playful Chinese Online Comments](https://aclanthology.org/2026.emnlp-main.846/). In *Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing (EMNLP 2026)*. Association for Computational Linguistics, Budapest, Hungary, 19623–19640. [https://doi.org/10.18653/2026.emnlp-main.846](https://doi.org/10.18653/2026.emnlp-main.846).

@@ -10,7 +10,7 @@ infobox:
   Residence: "Fairfax, Virginia, U.S."
   Education: |
     George Mason University (Ph.D. Student)
-    University of Minnesota (M.S., B.S.)
+    University of Minnesota (M.S., B.A.)
   Occupation: Ph.D. Student
 ---
 
@@ -18,7 +18,7 @@ infobox:
 
 ## Academic Background
 
-Junjie Ma received both his Master's degree and Bachelor's degree in Computer Science from the [University of Minnesota, Twin Cities](https://twin-cities.umn.edu/), where he was advised by [Dr. Loren Terveen](https://lorenterveen.com/) and [Dr. Stevie Chancellor](https://steviechancellor.com/).
+Junjie Ma received his Master of Science (M.S.) and Bachelor of Arts (B.A.) degrees in Computer Science from the [University of Minnesota, Twin Cities](https://twin-cities.umn.edu/), where he was advised by [Dr. Loren Terveen](https://lorenterveen.com/) and [Dr. Stevie Chancellor](https://steviechancellor.com/).
 
 ## Research
 

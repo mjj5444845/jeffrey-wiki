@@ -8,7 +8,9 @@ Junjie Ma's teaching experience includes a guest lecture at George Mason Univers
 
 ## George Mason University
 
-Junjie Ma delivered a guest lecture on **Community Design** in **SWE 632 — User Interface Design & Development** at George Mason University.
+| Role | Course |
+|---|---|
+| Guest Lecturer | SWE 632 — User Interface Design & Development (Topic: Community Design) |
 
 ## University of Minnesota, Twin Cities
 
