@@ -2,6 +2,7 @@
 
 import type { ReactNode } from 'react'
 import Image from 'next/image'
+import { withBasePath } from '@/lib/paths'
 import type { InfoboxData } from '@/types/wiki'
 
 // Calculate completed years from a YYYY-MM birth date string
@@ -39,7 +40,7 @@ function renderValue(value: string): ReactNode {
       } else {
         // [text](url)
         parts.push(
-          <a key={match.index} href={match[3]} className="infobox-link">
+          <a key={match.index} href={withBasePath(match[3])} className="infobox-link">
             {match[2]}
           </a>
         )
@@ -79,7 +80,7 @@ export default function Infobox({ data }: Props) {
           <tr>
             <td colSpan={2} className="infobox-image-cell">
               <Image
-                src={data.image}
+                src={withBasePath(data.image)}
                 alt={data.imageCaption || data.title || ''}
                 width={220}
                 height={220}

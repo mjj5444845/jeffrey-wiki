@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import Infobox from './Infobox'
 import TableOfContents from './TableOfContents'
 import { ui as t } from '@/lib/ui'
@@ -15,7 +16,7 @@ export default function WikiContent({ page }: Props) {
         <ul className="wiki-page-tabs">
           <li className="wiki-page-tab active"><span>{t.tabRead}</span></li>
           <li className="wiki-page-tab">
-            <a href={siteConfig.messageUrl}>{t.tabMessage}</a>
+            <Link href={siteConfig.messageUrl}>{t.tabMessage}</Link>
           </li>
           <li className="wiki-page-tab">
             <a href={siteConfig.historyUrl} target="_blank" rel="noopener noreferrer">

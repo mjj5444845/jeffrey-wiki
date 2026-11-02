@@ -11,7 +11,7 @@ interface Props {
 }
 
 export default function WikiNav({ pages }: Props) {
-  const pathname = usePathname()
+  const pathname = usePathname().replace(/\/$/, '') || '/'
   const navigationPages = siteConfig.navigationSlugs
     .map((slug) => pages.find((page) => page.slug === slug))
     .filter((page): page is WikiPageMeta => page !== undefined)

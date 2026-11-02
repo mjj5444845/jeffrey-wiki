@@ -21,7 +21,7 @@ and Markdown with YAML front matter.
 - `src/lib/ui.ts`: shared English UI labels; the site has no language switcher.
 - `src/types/wiki.ts`: article and metadata types.
 
-`/` redirects to `/wiki/home`; `/wiki/index` lists all articles; `/message` is a
+`/` renders the home article; `/wiki/index` lists all articles; `/message` is a
 static contact page. There is no search route or contact backend. Section pages
 follow `siteConfig.navigationSlugs`; other articles appear under Pages automatically.
 Do not maintain a second page inventory in documentation.
@@ -94,3 +94,21 @@ also check front matter, internal links, referenced images, and related articles
 Keep personal permissions, absolute machine paths, generated files, and credentials
 out of Git. Keep setup and maintenance instructions in this guide; README stays
 limited to the personal-homepage description, LLM Wiki inspiration, and MIT license.
+
+
+## GitHub Pages deployment
+
+`.github/workflows/pages.yml` builds and deploys `main` through GitHub Actions.
+Next.js exports static files to ignored `out/`; no server or `next start` is used.
+Run `npm run dev` locally or serve `out/` with any static HTTP server after building.
+The workflow reads Pages `base_path` into `NEXT_PUBLIC_BASE_PATH` before building.
+For the default project URL this is `/jeffrey-wiki`; local development defaults to
+an empty prefix. Use `next/link` for React page links (it adds the prefix itself)
+and `withBasePath` for public assets and plain HTML URLs. The Markdown pipeline
+prefixes local href/src attributes after raw HTML parsing. Keep `trailingSlash`,
+static dynamic-route parameters, and unoptimized images enabled for static hosting.
+Verify exports with `NEXT_PUBLIC_BASE_PATH=/jeffrey-wiki npm run build`, checking
+that internal links and image/style/script assets resolve under that prefix.
+`vercel.json` disables Git-triggered Vercel deployments; existing deployments
+remain until removed in Vercel. README intentionally remains minimal; deployment
+details belong here.

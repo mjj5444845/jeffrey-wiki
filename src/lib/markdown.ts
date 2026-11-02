@@ -1,4 +1,5 @@
 import matter from 'gray-matter'
+import { withBasePath } from './paths'
 import { unified } from 'unified'
 import remarkParse from 'remark-parse'
 import remarkGfm from 'remark-gfm'
@@ -35,6 +36,15 @@ function rehypeExtractHeadings(sink: HeadingItem[]): Plugin<[], Root> {
   }
 }
 
+const rehypeLocalPaths: Plugin<[], Root> = () => (tree) => {
+  visit(tree, 'element', (node) => {
+    for (const key of ['href', 'src'] as const) {
+      const value = node.properties[key]
+      if (typeof value === 'string') node.properties[key] = withBasePath(value)
+    }
+  })
+}
+
 function parseInfobox(raw: WikiFrontMatter['infobox']): InfoboxData | undefined {
   if (!raw) return undefined
   const reserved = new Set(['title', 'image', 'imageCaption'])
@@ -58,6 +68,7 @@ async function buildHtml(source: string): Promise<{ html: string; headings: Head
     .use(remarkWikiLinks)
     .use(remarkRehype, { allowDangerousHtml: true })
     .use(rehypeRaw)
+    .use(rehypeLocalPaths)
     .use(rehypeSlug)
     .use(rehypeExtractHeadings(headings))
     .use(rehypeStringify)

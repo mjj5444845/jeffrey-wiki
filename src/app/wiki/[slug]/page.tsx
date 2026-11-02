@@ -4,6 +4,8 @@ import { getPage, getAllSlugs, getAllPagesMeta } from '@/lib/pages'
 import WikiLayout from '@/components/WikiLayout'
 import WikiContent from '@/components/WikiContent'
 
+export const dynamicParams = false
+
 interface Props {
   params: Promise<{ slug: string }>
 }
