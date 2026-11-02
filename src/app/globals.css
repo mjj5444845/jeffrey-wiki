@@ -323,32 +323,6 @@ a:hover { text-decoration: underline; }
 
 .infobox-image { display: block; margin: 0 auto; }
 
-.infobox-image-wrap { position: relative; }
-.infobox-image-wrap:focus-visible { outline: 2px solid var(--wiki-link); outline-offset: 2px; }
-
-/* Classic desktop tooltip: pale yellow paper, fine border, offset shadow. */
-.infobox-image-tooltip {
-  position: absolute;
-  right: 8px;
-  bottom: 10px;
-  z-index: 2;
-  padding: 5px 9px;
-  border: 1px solid #545454;
-  background: #ffffe1;
-  color: #202122;
-  box-shadow: 2px 2px 0 rgb(0 0 0 / 20%);
-  font-family: var(--wiki-font);
-  font-size: 0.875rem;
-  font-weight: normal;
-  line-height: 1.5;
-  white-space: nowrap;
-  visibility: hidden;
-  pointer-events: none;
-}
-
-.infobox-image-wrap:hover .infobox-image-tooltip,
-.infobox-image-wrap:focus-visible .infobox-image-tooltip { visibility: visible; }
-
 .infobox-image-caption {
   font-size: 0.75rem;
   color: var(--wiki-text-muted);

@@ -47,14 +47,14 @@ const rehypeLocalPaths: Plugin<[], Root> = () => (tree) => {
 
 function parseInfobox(raw: WikiFrontMatter['infobox']): InfoboxData | undefined {
   if (!raw) return undefined
-  const reserved = new Set(['title', 'image', 'imageCaption', 'imageTooltip'])
+  const reserved = new Set(['title', 'image', 'imageCaption'])
   const fields: InfoboxField[] = Object.entries(raw)
     .filter(([key, val]) => !reserved.has(key) && val !== undefined)
     .map(([key, val]) => ({
       label: key.replace(/([A-Z])/g, ' $1').trim(),
       value: String(val),
     }))
-  return { title: raw.title, image: raw.image, imageCaption: raw.imageCaption, imageTooltip: raw.imageTooltip, fields }
+  return { title: raw.title, image: raw.image, imageCaption: raw.imageCaption, fields }
 }
 
 async function buildHtml(source: string): Promise<{ html: string; headings: HeadingItem[]; fm: WikiFrontMatter }> {

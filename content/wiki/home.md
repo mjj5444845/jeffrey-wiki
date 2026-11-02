@@ -5,7 +5,6 @@ tags: [homepage]
 infobox:
   title: Junjie Ma (马骏杰)
   image: /profile.jpg
-  imageTooltip: 今者吾丧我。
   imageCaption: Junjie Ma · George Mason University
   Born: "December 1996 {age:1996-12}"
   Residence: "Fairfax, Virginia, U.S."

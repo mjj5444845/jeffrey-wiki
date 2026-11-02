@@ -51,7 +51,7 @@ tags: [research]
 
 `title` is required. Optional keys are `description` (string), `tags` (string array),
 and `infobox` (mapping of string values). Infobox reserves `title`, `image`, and
-`imageCaption`, and optional hover text `imageTooltip`; other keys become table rows with camelCase labels split into words.
+`imageCaption`; other keys become table rows with camelCase labels split into words.
 Image paths start at `public/`, e.g. `/profile.jpg`. Infobox values support
 `{age:YYYY-MM}`, `[label](url)`, and literal `\n` for line breaks.
 
