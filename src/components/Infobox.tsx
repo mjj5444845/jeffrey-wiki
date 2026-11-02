@@ -1,6 +1,6 @@
 'use client'
 
-import type { ReactNode } from 'react'
+import { useId, type ReactNode } from 'react'
 import Image from 'next/image'
 import { withBasePath } from '@/lib/paths'
 import type { InfoboxData } from '@/types/wiki'
@@ -70,6 +70,7 @@ interface Props {
 }
 
 export default function Infobox({ data }: Props) {
+  const tooltipId = useId()
   return (
     <table className="infobox">
       {data.title && (
@@ -79,14 +80,25 @@ export default function Infobox({ data }: Props) {
         <tbody>
           <tr>
             <td colSpan={2} className="infobox-image-cell">
-              <Image
-                src={withBasePath(data.image)}
-                alt={data.imageCaption || data.title || ''}
-                width={220}
-                height={220}
-                className="infobox-image"
-                style={{ objectFit: 'cover', width: '100%', height: 'auto' }}
-              />
+              <div
+                className="infobox-image-wrap"
+                tabIndex={data.imageTooltip ? 0 : undefined}
+                aria-describedby={data.imageTooltip ? tooltipId : undefined}
+              >
+                <Image
+                  src={withBasePath(data.image)}
+                  alt={data.imageCaption || data.title || ''}
+                  width={220}
+                  height={220}
+                  className="infobox-image"
+                  style={{ objectFit: 'cover', width: '100%', height: 'auto' }}
+                />
+                {data.imageTooltip && (
+                  <span id={tooltipId} role="tooltip" className="infobox-image-tooltip">
+                    {data.imageTooltip}
+                  </span>
+                )}
+              </div>
               {data.imageCaption && (
                 <div className="infobox-image-caption">{data.imageCaption}</div>
               )}

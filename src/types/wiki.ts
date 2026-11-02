@@ -7,6 +7,7 @@ export interface InfoboxData {
   title?: string
   image?: string
   imageCaption?: string
+  imageTooltip?: string
   fields: InfoboxField[]
 }
 
@@ -24,6 +25,7 @@ export interface WikiFrontMatter {
     title?: string
     image?: string
     imageCaption?: string
+    imageTooltip?: string
     [key: string]: string | undefined
   }
 }
