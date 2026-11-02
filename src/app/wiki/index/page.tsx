@@ -1,9 +1,10 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import siteConfig from '@/lib/siteConfig'
 import { getAllPagesMeta } from '@/lib/pages'
 import WikiLayout from '@/components/WikiLayout'
 
-export const metadata: Metadata = { title: 'All Pages — Personal Wiki' }
+export const metadata: Metadata = { title: `All Pages — ${siteConfig.name}` }
 
 export default function IndexPage() {
   const pages = getAllPagesMeta()

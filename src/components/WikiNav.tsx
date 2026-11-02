@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { useLanguage } from '@/context/LanguageContext'
+import { ui as t } from '@/lib/ui'
 import siteConfig from '@/lib/siteConfig'
 import type { WikiPageMeta } from '@/types/wiki'
 
@@ -12,7 +12,6 @@ interface Props {
 
 export default function WikiNav({ pages }: Props) {
   const pathname = usePathname()
-  const { t } = useLanguage()
   const navigationPages = siteConfig.navigationSlugs
     .map((slug) => pages.find((page) => page.slug === slug))
     .filter((page): page is WikiPageMeta => page !== undefined)

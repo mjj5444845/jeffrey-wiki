@@ -1,8 +1,6 @@
-'use client'
-
 import Infobox from './Infobox'
 import TableOfContents from './TableOfContents'
-import { useLanguage } from '@/context/LanguageContext'
+import { ui as t } from '@/lib/ui'
 import siteConfig from '@/lib/siteConfig'
 import type { WikiPage } from '@/types/wiki'
 
@@ -11,11 +9,8 @@ interface Props {
 }
 
 export default function WikiContent({ page }: Props) {
-  const { t } = useLanguage()
-
   return (
     <div className="wiki-content-wrapper">
-
       <div className="wiki-tabs-row">
         <ul className="wiki-page-tabs">
           <li className="wiki-page-tab active"><span>{t.tabRead}</span></li>

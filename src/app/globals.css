@@ -80,37 +80,6 @@ a:hover { text-decoration: underline; }
 }
 .wiki-header-site-name:hover { text-decoration: none; color: var(--wiki-text-muted); }
 
-/* ── Search form ─────────────────────────────────────────────────── */
-.wiki-search-form { display: flex; align-items: center; gap: 4px; }
-
-.wiki-search-input {
-  font-family: var(--wiki-ui-font);
-  font-size: 0.8125rem;
-  padding: 4px 8px;
-  border: 1px solid var(--wiki-border);
-  border-radius: 2px;
-  background: #fff;
-  color: var(--wiki-text);
-  width: 240px;
-  outline: none;
-  transition: border-color 0.15s;
-}
-.wiki-search-input:focus { border-color: #3366cc; }
-.wiki-search-input::placeholder { color: #9aa0a6; }
-
-.wiki-search-btn {
-  font-family: var(--wiki-ui-font);
-  font-size: 0.8125rem;
-  padding: 4px 10px;
-  background: #f8f9fa;
-  border: 1px solid var(--wiki-border);
-  border-radius: 2px;
-  color: var(--wiki-text);
-  cursor: pointer;
-  white-space: nowrap;
-}
-.wiki-search-btn:hover { background: var(--wiki-border-light); }
-
 /* ── Body row ────────────────────────────────────────────────────── */
 .wiki-body {
   display: flex;
@@ -140,31 +109,6 @@ a:hover { text-decoration: underline; }
    SIDEBAR NAVIGATION
 ══════════════════════════════════════════════════════════════════ */
 .wiki-nav { font-family: var(--wiki-ui-font); }
-
-/* Wordmark / logo area */
-.wiki-nav-wordmark {
-  padding: 14px 12px 12px;
-  border-bottom: 1px solid var(--wiki-border-light);
-}
-
-.wiki-nav-wordmark-link { text-decoration: none !important; display: block; }
-
-.wiki-nav-wordmark-name {
-  display: block;
-  font-family: var(--wiki-font);
-  font-size: 1.05rem;
-  font-style: italic;
-  color: var(--wiki-text);
-  line-height: 1.2;
-}
-
-.wiki-nav-wordmark-sub {
-  display: block;
-  font-family: var(--wiki-ui-font);
-  font-size: 0.68rem;
-  color: var(--wiki-text-muted);
-  margin-top: 2px;
-}
 
 /* Nav sections */
 .wiki-nav-section {
@@ -204,7 +148,7 @@ a:hover { text-decoration: underline; }
 ══════════════════════════════════════════════════════════════════ */
 .wiki-content-wrapper { padding: 0 24px 32px; }
 
-/* Row that holds language toggle (left) + article tabs (right) */
+/* Article action tabs row */
 .wiki-tabs-row {
   display: flex;
   align-items: flex-end;
@@ -214,29 +158,6 @@ a:hover { text-decoration: underline; }
   position: relative;
   z-index: 1;
 }
-
-/* ── Language toggle button — Wikipedia globe style ── */
-.wiki-lang-toggle {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  font-family: var(--wiki-ui-font);
-  font-size: 0.8125rem;
-  color: var(--wiki-link);
-  background: var(--wiki-tab-bg);
-  border: 1px solid var(--wiki-border);
-  border-radius: 3px 3px 0 0;
-  border-bottom: none;
-  padding: 4px 12px;
-  cursor: pointer;
-  line-height: 1.5;
-  /* lift into the tabs row */
-  margin-bottom: 0;
-}
-.wiki-lang-toggle:hover { background: #e8eaf0; text-decoration: none; }
-
-.wiki-lang-toggle-icon { font-size: 0.875rem; }
-.wiki-lang-toggle-label { font-size: 0.8125rem; }
 
 /* Article action tabs */
 .wiki-page-tabs {
@@ -280,15 +201,6 @@ a:hover { text-decoration: underline; }
 .wiki-article {
   border-top: 1px solid var(--wiki-border);
   padding-top: 12px;
-}
-
-/* "来自 Junjie Ma 的个人维基" tagline */
-.wiki-from-tagline {
-  font-family: var(--wiki-ui-font);
-  font-size: 0.78rem;
-  color: var(--wiki-text-muted);
-  font-style: italic;
-  margin-bottom: 6px;
 }
 
 .wiki-article-title {
@@ -696,80 +608,6 @@ a:hover { text-decoration: underline; }
 .wiki-nav-section-first { padding-top: 4px; }
 
 /* ══════════════════════════════════════════════════════════════════
-   MESSAGE FORM
-══════════════════════════════════════════════════════════════════ */
-.wiki-message-form {
-  max-width: 600px;
-}
-
-.wiki-form-row {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  margin-bottom: 14px;
-}
-
-.wiki-form-label {
-  font-family: var(--wiki-ui-font);
-  font-size: 0.875rem;
-  font-weight: bold;
-  color: var(--wiki-text);
-}
-
-.wiki-form-input,
-.wiki-form-textarea {
-  font-family: var(--wiki-ui-font);
-  font-size: 0.875rem;
-  color: var(--wiki-text);
-  background: #fff;
-  border: 1px solid var(--wiki-border);
-  border-radius: 2px;
-  padding: 5px 8px;
-  width: 100%;
-  box-sizing: border-box;
-  outline: none;
-  transition: border-color 0.15s;
-}
-.wiki-form-input:focus,
-.wiki-form-textarea:focus {
-  border-color: #3366cc;
-}
-
-.wiki-form-textarea {
-  resize: vertical;
-  line-height: 1.5;
-}
-
-.wiki-form-actions {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-top: 4px;
-}
-
-.wiki-form-btn {
-  font-family: var(--wiki-ui-font);
-  font-size: 0.875rem;
-  background: #f8f9fa;
-  border: 1px solid var(--wiki-border);
-  border-radius: 2px;
-  padding: 5px 14px;
-  cursor: pointer;
-  color: var(--wiki-text);
-  white-space: nowrap;
-}
-.wiki-form-btn:hover {
-  background: #e8e9ea;
-  border-color: #999;
-}
-
-.wiki-form-note {
-  font-family: var(--wiki-ui-font);
-  font-size: 0.8rem;
-  color: var(--wiki-text-muted);
-}
-
-/* ══════════════════════════════════════════════════════════════════
    RESPONSIVE
 ══════════════════════════════════════════════════════════════════ */
 @media (max-width: 720px) {
@@ -781,7 +619,6 @@ a:hover { text-decoration: underline; }
     border-bottom: 1px solid var(--wiki-border-light);
   }
 
-  .wiki-nav-wordmark,
   .wiki-nav-section { border-bottom: none; }
 
   .infobox {
@@ -797,8 +634,6 @@ a:hover { text-decoration: underline; }
     max-width: 100%;
     margin: 0 0 16px;
   }
-
-  .wiki-search-input { width: 140px; }
 
   .wiki-content-wrapper { padding: 0 12px 24px; }
 }

@@ -54,4 +54,3 @@ const remarkWikiLinks: Plugin<[], Root> = () => {
 }
 
 export default remarkWikiLinks
-export { slugify }

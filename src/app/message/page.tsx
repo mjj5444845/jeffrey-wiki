@@ -1,9 +1,10 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import siteConfig from '@/lib/siteConfig'
 import { getAllPagesMeta } from '@/lib/pages'
 import WikiLayout from '@/components/WikiLayout'
 
-export const metadata: Metadata = { title: 'Contact — JeffreyWiki' }
+export const metadata: Metadata = { title: `Contact — ${siteConfig.name}` }
 
 export default function ContactPage() {
   const pages = getAllPagesMeta()
@@ -31,7 +32,7 @@ export default function ContactPage() {
                 <tbody>
                   <tr>
                     <th>Email</th>
-                    <td><a href="mailto:jma26@gmu.edu">jma26@gmu.edu</a></td>
+                    <td><a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a></td>
                   </tr>
                   <tr>
                     <th>LinkedIn</th>

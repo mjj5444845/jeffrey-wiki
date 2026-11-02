@@ -9,7 +9,7 @@ import rehypeStringify from 'rehype-stringify'
 import { visit } from 'unist-util-visit'
 import type { Root, Element, Text } from 'hast'
 import type { Plugin } from 'unified'
-import remarkWikiLinks, { slugify } from './wikilinks'
+import remarkWikiLinks from './wikilinks'
 import type { WikiFrontMatter, WikiPage, InfoboxData, InfoboxField, HeadingItem } from '@/types/wiki'
 
 function hastText(node: Element): string {
@@ -78,5 +78,3 @@ export async function processMarkdown(source: string, slug: string): Promise<Wik
     content: html,
   }
 }
-
-export { slugify }

@@ -1,7 +1,6 @@
-'use client'
-
+import Link from 'next/link'
 import WikiNav from './WikiNav'
-import { useLanguage } from '@/context/LanguageContext'
+import { ui as t } from '@/lib/ui'
 import siteConfig from '@/lib/siteConfig'
 import type { WikiPageMeta } from '@/types/wiki'
 
@@ -11,22 +10,11 @@ interface Props {
 }
 
 export default function WikiLayout({ children, pages }: Props) {
-  const { t } = useLanguage()
-
   return (
     <div className="wiki-layout">
       <header className="wiki-header">
         <div className="wiki-header-inner">
-          <a href="/" className="wiki-header-site-name">{siteConfig.name}</a>
-          <form className="wiki-search-form" action="/search" method="get">
-            <input
-              type="search"
-              name="q"
-              placeholder={t.searchPlaceholder}
-              className="wiki-search-input"
-            />
-            <button type="submit" className="wiki-search-btn">{t.search}</button>
-          </form>
+          <Link href="/" className="wiki-header-site-name">{siteConfig.name}</Link>
         </div>
       </header>
 
@@ -39,8 +27,8 @@ export default function WikiLayout({ children, pages }: Props) {
 
       <footer className="wiki-footer">
         <ul className="wiki-footer-links">
-          <li><a href="/wiki/home">{t.footerAbout}</a></li>
-          <li><a href="/wiki/index">{t.footerAllPages}</a></li>
+          <li><Link href="/wiki/home">{t.footerAbout}</Link></li>
+          <li><Link href="/wiki/index">{t.footerAllPages}</Link></li>
         </ul>
         <p className="wiki-footer-text">
           Junjie Ma · George Mason University · Inspired by{' '}

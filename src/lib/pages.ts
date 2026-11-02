@@ -2,7 +2,7 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 import siteConfig from './siteConfig'
-import { processMarkdown, slugify } from './markdown'
+import { processMarkdown } from './markdown'
 import type { WikiPage, WikiPageMeta, WikiFrontMatter } from '@/types/wiki'
 
 const WIKI_DIR = path.join(process.cwd(), 'content', 'wiki')
@@ -46,5 +46,3 @@ export async function getPage(slug: string): Promise<WikiPage | null> {
 
   return page
 }
-
-export { slugify }

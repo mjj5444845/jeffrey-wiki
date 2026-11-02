@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { useLanguage } from '@/context/LanguageContext'
+import { ui as t } from '@/lib/ui'
 import type { HeadingItem } from '@/types/wiki'
 
 interface Props {
@@ -10,17 +10,21 @@ interface Props {
 
 export default function TableOfContents({ headings }: Props) {
   const [hidden, setHidden] = useState(false)
-  const { t } = useLanguage()
 
   if (headings.length < 3) return null
 
   let h2Counter = 0
   let h3Counter = 0
-  const numbered = headings.map((h) => {
-    if (h.level === 2) { h2Counter++; h3Counter = 0; return { ...h, num: String(h2Counter) } }
-    h3Counter++
-    return { ...h, num: `${h2Counter}.${h3Counter}` }
-  })
+  const numbered = []
+  for (const h of headings) {
+    if (h.level === 2) {
+      h2Counter++
+      h3Counter = 0
+    } else {
+      h3Counter++
+    }
+    numbered.push({ ...h, num: h.level === 2 ? String(h2Counter) : `${h2Counter}.${h3Counter}` })
+  }
 
   return (
     <div className="wiki-toc" id="toc">
